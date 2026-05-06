@@ -4,40 +4,62 @@ lunes 27 abril 2026
 
 nos vemos a la vuelta del receso
 
-mu editor R.I.P
-python 
-para utilizar se escribe menos pero se debe respetar los espacios 
-y se utiliza para la raspberry pico
+# Editor Mu (R.I.P.) y uso de Python
 
-* nympy 
-* scipy
+Python es un lenguaje de programación sencillo de aprender porque permite escribir menos código en comparación con otros lenguajes. Sin embargo, es muy importante respetar la indentación (espacios y tabulaciones), ya que estos definen la estructura del programa.
 
-# circuitpython
+Se utiliza ampliamente en proyectos con microcontroladores como la Raspberry Pi Pico, especialmente en entornos educativos y de prototipado.
 
-se descarga el 10.2.0
+Algunas librerías importantes en Python son:
 
-<img width="1883" height="808" alt="PUTTY" src="https://github.com/user-attachments/assets/47e41a60-653f-4f87-a7e1-26a7cd5d53f6" />
+NumPy (no “nympy”): usada para cálculos matemáticos y manejo de arreglos.
+SciPy: complementa a NumPy con herramientas más avanzadas para ciencia e ingeniería.
+CircuitPython
 
+CircuitPython es una versión de Python diseñada para microcontroladores como la Raspberry Pi Pico.
 
-boton, conectar
+## Instalación
+* Descargar la versión 10.2.0 (u otra compatible).
+* Conectar la Raspberry Pi Pico al computador en modo BOOTSEL.
+* Copiar el archivo .uf2 a la placa.
+* La placa aparecerá como una unidad llamada CIRCUITPY.
 
-<img width="804" height="480" alt="descarga de pico2" src="https://github.com/user-attachments/assets/815e6ade-4576-4f3b-aa81-ac84f392d2c7" />
+## Uso básico
+El archivo principal es code.py.
+En este archivo puedes escribir y modificar el código directamente.
+Cada vez que guardas cambios, el programa se ejecuta automáticamente en la placa.
+Comandos útiles
 
-code.py en el archivo se puede ingresar y cambiar el archibo 
+* Ctrl + C: detiene la ejecución del programa.
+* Ctrl + D: reinicia el microcontrolador.
+  
+## Indicadores en el editor
+Un círculo blanco indica que el archivo no está guardado.
+Una X indica que los cambios ya fueron guardados.
+Instalación de librerías
 
-* para salir ctrl+C o ctrl+D
-cuando en la pagina tiene un circulo blanco es porque no esta grabado pero luego cuando aparece una X es ya que esta guardado
+## Para usar funcionalidades avanzadas (como conexión a internet o sensores):
 
-descargar circuitpython libraries
-* bundle for vercion 10.x y descomprimir
-* luego ir a la carpeta con nombre lib
-* buscar la adafruit_minimqtt
-* luego adafruit_connection_manager_.mpy
-* luego adafruit_ticks_.mpy
+* Descargar el bundle de librerías para la versión 10.x.
+* Descomprimir el archivo.
+* Ir a la carpeta lib dentro de CIRCUITPY.
+* Copiar las siguientes librerías necesarias:
+* adafruit_minimqtt
+* adafruit_connection_manager.mpy
+* adafruit_ticks.mpy
 
-  ## potenciometro > raspi > adafruit io
-  ## adafruit io >
+Estas librerías permiten, por ejemplo, enviar datos a internet.
 
+Proyecto: Potenciómetro → Raspberry Pi Pico → Adafruit IO
+
+## Flujo básico:
+
+El potenciómetro envía valores analógicos.
+La Raspberry Pi Pico lee esos valores.
+Los datos se envían a la plataforma Adafruit IO.
+En Adafruit IO puedes visualizar los datos en gráficos o dashboards.
+
+Esto permite crear proyectos de monitoreo en tiempo real, como sensores de luz, temperatura o control de dispositivos.
   <img width="1347" height="780" alt="placa pico2" src="https://github.com/user-attachments/assets/3dbe075c-8f73-4ca3-815a-1e05f7d64b18" />
   sin potenciometro conectado
 
