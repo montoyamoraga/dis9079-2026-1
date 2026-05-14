@@ -25,7 +25,7 @@ Luego descargar las bibliotecas:
 
 ### Pins de la Raspberry
 ![raspberrypin](./imagenes/raspberry.png)
-
+> Los GND son cuadrados
 
 * Conectamos un potenciometro de 200k Ohm
 
