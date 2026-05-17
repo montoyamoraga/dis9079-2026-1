@@ -20,6 +20,8 @@ filtrado de información
 visualización de datos
 problemas comunes
 
+### Fuentes Sensor
+
 + <https://www.mechatronicstore.cl/sensor-de-deteccion-de-luz-fotosensible-digital/?srsltid=AfmBOooyaVFpS7vgsjQ7xQU6gjCxzt0Uxd_LYXZL8HfRX2tP1_rhH5VT>
 + <https://tecnosalva.com/que-es-y-como-funciona-una-ldr/>
 + 
@@ -63,8 +65,8 @@ Esta obra fue inspirada en el pensamiento de Martin Heidegger (1889 - 1976) sobr
 
 ---
 
-## Sensor
-
 ## Actuador
+
+---
 
 ## Bibliografía
