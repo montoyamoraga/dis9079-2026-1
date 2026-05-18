@@ -2,9 +2,9 @@
 
 ## Integrantes
 
-- nombre completo / github
-- nombre completo / github
-- nombre completo / github
+- Renata Árevalo / github
+- Isidora Pérez / github
+- Nicolás Valdés / github
 
 ## Descripción textual del proyecto
 
