@@ -153,6 +153,15 @@ void loop() { // ésto es en caso de que se caiga la conexión
 
 ## Imágenes del proyecto
 
+**ENVIAR**
+![titulo](./imagenes/enviar.jpeg)
+
+**RECIBIR**
+![titulo](./imagenes/recibir.jpeg)
+
+**CONJUNTO**
+![titulo](./imagenes/conjunto.jpeg)
+
 ## Animaciones del proyecto
 
 ## Bibliografía
