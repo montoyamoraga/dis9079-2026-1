@@ -22,7 +22,8 @@ mu editor (rip)
   * adafruit_connection_manager.mpy
   * adafruit_ticks.mpy
 **RASPBERRY**
-![titulo](./imagenes/raspberry.pdf)
+
+![titulo](./imagenes/raspberry.jpg)
 
 **V_CC voltaje alimentación** 
 + usaremos el de 5.0V
