@@ -5,7 +5,7 @@ Cristobal Vergara Silva / cristobalvergarasilva
 ## Sensor
 Avances 
 
-Estoy investigando del Sensor de pulso cardiaco (fotopletismografia), que es un sensor de codigo abierto, muy versatil en tanto a las placas a las que se puede conectar. El sensor más básico consta de dos componentes principales: un emisor de luz y un fotodiodo (receptor de luz).
+Estoy investigando del Sensor de pulso cardiaco (fotopletismografía), que es un sensor de codigo abierto, muy versatil en tanto a las placas a las que se puede conectar. El sensor más básico consta de dos componentes principales: un emisor de luz y un fotodiodo (receptor de luz).
 
 Funciona emitiendo luz LED sobre la piel y midiendo cuánta luz rebota hacia un fotodetector. Esto funciona porque cada vez que el corazón late, llega más sangre a los vasos sanguineos y eso cambia la cantidad de luz reflejada, generando una variación eléctrica. Contando esas variaciones se obtienen las pulsaciones por minuto (BPM), como es el caso del sensor de Pulse.sensor.com. El sensor mas utilizado es el MAX30102 que mide también oxígeno en sangre, fabricado por Maxim Integrated. Este ademas de tener dos leds y un fotodetector, tiene un sensor de temperatura interno y como consume poca corriente es facil hacer proyectos portatiles con el.
 
@@ -34,6 +34,7 @@ Como ejemplo me llamo la atencion Pulse Room de el artista digital Mexicano, Raf
 
 
 ## Actuador
+Steppers motors 
 
 ## Bibliografía
 
@@ -45,4 +46,7 @@ https://www.lozano-hemmer.com/pulse_room.php
 https://pulsesensor.com/pages/pulsesensor-manual
 https://afel.cl/products/sensor-pulsioximetria-max30102?srsltid=AfmBOooQsCS0TE0x-UjsNl8IM3HjaWYF2Kxkyd0HIkJtS6jv7nIKT0D3
 https://afel.cl/products/sensor-pulso-cardiaco-corazon?srsltid=AfmBOoo6FuucuOXlNX7iixlNmI2xyjE65Wf7BrylaO0yiD9LFT9xGvdn
+
+### Actuador 
+https://www.youtube.com/watch?v=kV8v2GKC8WA
 
