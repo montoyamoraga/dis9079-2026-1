@@ -29,7 +29,6 @@
 ## Código usado para enviar
 
 ```cpp
-
 import time
 import board
 import analogio
@@ -39,119 +38,213 @@ import socketpool
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
 
 # WiFi
-wifi.radio.connect("si", "mailo6192")
+SSID = "iPhone de Renata"
+PASSWORD = "arevalo12345"
+
+print("Conectando WiFi...")
+
+wifi.radio.connect(
+    SSID,
+    PASSWORD
+)
+
+print("WiFi conectado")
 
 # MQTT
 pool = socketpool.SocketPool(wifi.radio)
+
 mqtt = MQTT.MQTT(
     broker="io.adafruit.com",
     username="udpmontoyamoraga",
     password="keydeaarón",
-    socket_pool=pool,
+    socket_pool=pool
 )
 
 mqtt.connect()
 
-# se configura el pin A0 como entrada para leer el potenciómetro
+print("MQTT conectado")
+
+# Potenciómetro A0
 pot = analogio.AnalogIn(board.A0)
 
-# se configura el pin GP0 para el botón,
-# le dice a GP0 que es una entrada para que pueda leer datos
-# se activa una resistencia interna que mantiene el pin en false cuando aún no presionamos el botón
+# Botón GP0
 button = digitalio.DigitalInOut(board.GP0)
 button.direction = digitalio.Direction.INPUT
-button.pull = digitalio.Pull.DOWN # aquí menciona que el botón funciona con el sistema pull down que menciona el video que está en nuestra bibliografía
+
+# Pull UP interno
+button.pull = digitalio.Pull.UP
+
+ultimo_valor = -1
 
 while True:
-    if button.value:  # solo envía si el botón fue presionado
-        value = pot.value * 1023 // 65535
-        print(f"Botón presionado - Enviando valor: {value}") # nos va a mencionar en putty cuando presionamos el botón, y el valor del potenciómetro
 
-        mqtt.publish("udpmontoyamoraga/feeds/potenciometro-05", str(value))
+    # Con PULL_UP:
+    # False = presionado
+    # True = suelto
 
-        time.sleep(0.5)  # descanso pequeño jiji
+    if not button.value:
+
+        valor = pot.value * 1023 // 65535
+
+        # Evita enviar repetidos innecesarios
+        if abs(valor - ultimo_valor) > 5:
+
+            print("Enviando:", valor)
+
+            mqtt.publish(
+                "udpmontoyamoraga/feeds/potenciometro-05",
+                str(valor)
+            )
+
+            ultimo_valor = valor
+
+        time.sleep(0.2)
+
+    else:
+        time.sleep(0.01)
 ```
 
 ## Código usado para recibir
 
 ```cpp
-#include <Servo.h>
 #include <WiFiS3.h>
+#include <Servo.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
 
+// WiFi
+#define WLAN_SSID "iPhone de Renata"
+#define WLAN_PASS "arevalo12345"
 
-#define WIFI_SSID    "si"
-#define WIFI_PASS    "mailo6192"
-#define AIO_SERVER   "io.adafruit.com"
-#define AIO_PORT     1883
+// Adafruit IO
+#define AIO_SERVER "io.adafruit.com"
+#define AIO_SERVERPORT 1883
 #define AIO_USERNAME "udpmontoyamoraga"
-#define AIO_KEY      "keydeaarón"
-#define AIO_FEED     AIO_USERNAME "/feeds/potenciometro-05"
+#define AIO_KEY "keydeaarón"
 
-const int SERVO_PIN = 9; // se indica dónde está el motor servo (pin 9 del arduino)
+WiFiClient client;
+
+Adafruit_MQTT_Client mqtt(
+  &client,
+  AIO_SERVER,
+  AIO_SERVERPORT,
+  AIO_USERNAME,
+  AIO_KEY
+);
+
+// Suscribirse al feed
+Adafruit_MQTT_Subscribe potenciometro =
+Adafruit_MQTT_Subscribe(
+  &mqtt,
+  AIO_USERNAME "/feeds/potenciometro-05"
+);
+
 Servo miServo;
 
-WiFiClient wifiClient;
-Adafruit_MQTT_Client mqtt(&wifiClient, AIO_SERVER, AIO_PORT, AIO_USERNAME, AIO_KEY);
-
-Adafruit_MQTT_Subscribe potFeed = Adafruit_MQTT_Subscribe(&mqtt, AIO_FEED);
-
-
-// se conecta a wifi, y si no puede lo vuelve a intentar
-void connectWiFi() {
-  if (WiFi.status() == WL_CONNECTED) return;
-  Serial.print("Conectando a WiFi");
-  while (WiFi.begin(WIFI_SSID, WIFI_PASS) != WL_CONNECTED) {
-    Serial.print(".");
-    delay(1000);
-  }
-  Serial.println("\n WiFi conectado");
-}
-
-
-void connectMQTT() {
-  int8_t ret;
-  if (mqtt.connected()) return;
-  Serial.print("Conectando a Adafruit IO");
-  while ((ret = mqtt.connect()) != 0) {
-    Serial.println(mqtt.connectErrorString(ret));
-    mqtt.disconnect();
-    delay(3000);
-  }
-  Serial.println("\n✓ Adafruit IO conectado");
-}
-
+void MQTT_connect();
 
 void setup() {
-  Serial.begin(115200); // cambiar el serial monitor a 115200 en caso de que no esté en ese valo
-  delay(500);
-  myServo.attach(SERVO_PIN);
-  myServo.write(0); // posición inicial del servo
-  connectWiFi();
-  connectMQTT();
-  mqtt.subscribe(&potFeed);
+
+  Serial.begin(115200);
+
+  miServo.attach(9);
+
+  Serial.println("Conectando WiFi");
+
+  WiFi.begin(
+    WLAN_SSID,
+    WLAN_PASS
+  );
+
+  while (WiFi.status() != WL_CONNECTED) {
+
+    Serial.print(".");
+    delay(500);
+
+  }
+
+  Serial.println();
+  Serial.println("WiFi conectado");
+
+  mqtt.subscribe(&potenciometro);
 }
 
-void loop() { // ésto es en caso de que se caiga la conexión
-  connectWiFi();
-  connectMQTT();
+void loop() {
 
-  Adafruit_MQTT_Subscribe* subscription = mqtt.readSubscription(500);
+  MQTT_connect();
 
-  if (subscription == &potFeed) {
-    char* payload = (char*)potFeed.lastread;
+  Adafruit_MQTT_Subscribe *subscription;
 
-    int rawValue = atoi(payload);
-    rawValue = constrain(rawValue, 0, 1023);
+  while ((subscription = mqtt.readSubscription(1000))) {
 
-    int angle = map(rawValue, 0, 1023, 0, 180);
-    myServo.write(angle); // servo se mueve jijijiji
+    if (subscription == &potenciometro) {
+
+      int valorPot = atoi(
+        (char*)potenciometro.lastread
+      );
+
+      Serial.print("Recibido: ");
+      Serial.println(valorPot);
+
+      // Convertir 0-1023 a 0-180°
+      int angulo = map(
+        valorPot,
+        0,
+        1023,
+        0,
+        180
+      );
+
+      angulo = constrain(
+        angulo,
+        0,
+        180
+      );
+
+      Serial.print("Ángulo: ");
+      Serial.println(angulo);
+
+      miServo.write(angulo);
+    }
   }
+}
+
+void MQTT_connect() {
+
+  int8_t ret;
+
+  if (mqtt.connected()) {
+    return;
+  }
+
+  Serial.print("Conectando MQTT...");
+
+  while ((ret = mqtt.connect()) != 0) {
+
+    Serial.println(
+      mqtt.connectErrorString(ret)
+    );
+
+    mqtt.disconnect();
+
+    delay(5000);
+
+  }
+
+  Serial.println(" conectado");
 }
 ```
 
 ## Imágenes del proyecto
+
+**ENVIAR**
+![titulo](./imagenes/enviar.jpeg)
+
+**RECIBIR**
+![titulo](./imagenes/recibir.jpeg)
+
+**CONJUNTO**
+![titulo](./imagenes/conjunto.jpeg)
 
 ## Animaciones del proyecto
 

@@ -6,13 +6,14 @@ chico maker (datito)
 como inyectar cosas de adafruit a la raspberry 
 mu editor (rip) 
 
-visual studio code 
+**visual studio code** 
 + lenguaje phyton: lenguaje programación alto nivel, uno de los más populares y versátiles
 + lo que importa son los espacios (super estricto) OBLIGATORIO, ayuda a crear jerarquía en el código
 + Scipy
 + Mycrophyton
 
-Circuitphyton 10.2.0 (varible) 
+**Circuitphyton 10.2.0 (varible)** 
++ versión diseñada para experimentar y aprender a programar microcontroladores
 + nieto jeje
 + Este usaremos!
 + > Descargar CircuitPython 10.2.0 en <https://circuitpython.org/board/raspberry_pi_pico/>
@@ -20,7 +21,10 @@ Circuitphyton 10.2.0 (varible)
   * adafruit_minimqtt
   * adafruit_connection_manager.mpy
   * adafruit_ticks.mpy
+**RASPBERRY**
 
-V_CC voltaje alimentación 
+![titulo](./imagenes/raspberry.jpg)
+
+**V_CC voltaje alimentación** 
 + usaremos el de 5.0V
 + ADC: Conversor (análogo-digital) 

@@ -2,9 +2,9 @@
 
 ## Integrantes
 
-- nombre completo / github
-- nombre completo / github
-- nombre completo / github
+- Magdalena Balart / magdalenabalart
+- Jesús Miranda / jesumirandaa
+- Carla Núñez / ccarlabelenn
 
 ## Descripción textual del proyecto
 

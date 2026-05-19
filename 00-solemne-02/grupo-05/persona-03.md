@@ -74,6 +74,24 @@ Esta obra fue inspirada en el pensamiento de Martin Heidegger (1889 - 1976) sobr
 
 ## Actuador
 
+### PCD8544 LCD
+
+uso del sensor
+filtrado de info
+visualización de datos
+problemas comunes
+
+
+### Fuentes Actuador
+
++
+
+###  Nokia 5110
+
+### Fuentes Proyecto
+
++ <https://www.xataka.com/moviles/nokia-5110-telefonos-con-historia-iii>
+
 ---
 
 ## Bibliografía
