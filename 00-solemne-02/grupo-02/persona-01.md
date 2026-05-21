@@ -107,6 +107,7 @@ Los botones pulsadores son utilizados en:
 ##  Empresa o Proyecto Relacionado
 
 ## Amazon Dash Button
+![Empresa](imagenes/Amazon.png) 
 
 Amazon desarrolló botones inteligentes llamados “Dash Buttons”, los cuales permitían ejecutar acciones automáticas al ser presionados mediante conexión a internet.
 
@@ -121,7 +122,7 @@ El botón pulsador es un sensor simple pero fundamental en electrónica e IoT. P
 ## Actuador
 ###  Actuador Utilizado: LED Indicador
 
-![LED](https://upload.wikimedia.org/wikipedia/commons/0/0b/Red_LED.jpg)
+![LED](imagenes/Luz_led.jfif)
 
 ##  ¿Qué es un LED?
 
@@ -213,7 +214,7 @@ Los LEDs son utilizados en:
 ##  Empresa o Proyecto Relacionado
 
 ## Philips Smart Lighting
-
+![Empresa](imagenes/empresa.jpg)
 Philips utiliza sistemas LED inteligentes en proyectos de:
 
 - Iluminación urbana
