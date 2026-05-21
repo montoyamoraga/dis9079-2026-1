@@ -24,11 +24,11 @@ Los datos captados por los sensores pueden mostrarse en gráficos, pantallas o a
 
 Los sensores pueden presentar distintos problemas como:
 
-° Interferencias inalámbricas.
-° Lecturas incorrectas.
-° Falta de calibración.
-° Sensibilidad excesiva.
-° Daños por humedad o temperatura.
+• Interferencias inalámbricas.
+• Lecturas incorrectas.
+• Falta de calibración.
+• Sensibilidad excesiva.
+• Daños por humedad o temperatura.
 
 Estos errores afectan la precisión de los datos y el funcionamiento del sistema. Por ello es importante realizar mantenimiento y configurar correctamente el sensor.
 
@@ -37,11 +37,45 @@ La empresa Tesla utiliza múltiples sensores en sus vehículos eléctricos y aut
 
 # Actuador
 
-# Bibliografía
+## ¿Qué es un actuador?
 
-Referencias APA
+Un actuador es un dispositivo que transforma energía en movimiento o acción física. A diferencia de los sensores, los actuadores no detectan información, sino que ejecutan una acción después de recibir una señal de control. Son esenciales en sistemas automatizados e inalámbricos.
+
+## Uso de un actuador
+
+Un ejemplo común es el servomotor, un actuador que permite controlar movimientos precisos de rotación. Se utiliza en robots, drones, puertas automáticas y brazos mecánicos. El sistema inalámbrico envía señales al actuador y este responde realizando el movimiento programado.
+
+## Filtrado de información
+
+En actuadores también existe filtrado de información para evitar movimientos erróneos o bruscos. Por ejemplo, un robot puede filtrar señales repetidas o interferencias antes de activar un motor. Esto mejora la estabilidad del sistema y evita fallas mecánicas.
+
+## Visualización de datos
+
+Los actuadores pueden monitorearse mediante interfaces digitales que muestran velocidad, posición o fuerza aplicada. Esta visualización ayuda a controlar el funcionamiento del sistema y detectar errores. En robótica, los datos suelen visualizarse mediante gráficos y simulaciones en tiempo real.
+
+## Problemas comunes
+
+Entre los problemas más frecuentes en actuadores se encuentran:
+
+• Sobrecalentamiento.
+• Pérdida de precisión.
+• Desgaste mecánico.
+• Problemas eléctricos.
+• Retrasos en la respuesta inalámbrica.
+
+Estos inconvenientes pueden afectar el rendimiento y la seguridad del sistema automatizado.
+
+Proyecto o empresa que utiliza actuadores
+La empresa Boston Dynamics utiliza actuadores avanzados en robots como Spot y Atlas. Estos robots emplean motores y sistemas hidráulicos que permiten caminar, correr, levantar objetos y mantener equilibrio automáticamente. Los actuadores son esenciales para generar movimientos similares a los humanos o animales.
+
+# Bibliografía
 
 ibm.com⁠
 arduino.cc⁠
 learn.microsoft.com⁠
 tesla.com⁠
+ibm.com⁠
+docs.arduino.cc⁠
+bostondynamics.com⁠
+ni.com⁠
+
