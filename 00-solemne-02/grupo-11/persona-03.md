@@ -38,3 +38,10 @@ La empresa Tesla utiliza múltiples sensores en sus vehículos eléctricos y aut
 # Actuador
 
 # Bibliografía
+
+Referencias APA
+
+ibm.com⁠
+arduino.cc⁠
+learn.microsoft.com⁠
+tesla.com⁠
