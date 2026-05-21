@@ -28,6 +28,15 @@ durante la clase se probo con enviar datos al adafruit
 
 
 ## Materiales usados
+* Raspberry Pi pico 2
+* Arduino R4
+* el LEDBotón pulsador (push button 4 patas)
+* LED (cualquier color)
+* Resistencia 220Ω1Protege el LED de sobrecorriente
+* Protoboard (placa de pruebas)
+* Cables puente macho-macho
+* Cable micro-USB1
+* Cable USB-C
 
 ## Sensor usado
 
