@@ -77,13 +77,11 @@ Indirectamente, la visualización final de cada presión es el texto que aparece
 | El botón se "pega" y sigue enviando | El loop no espera que se suelte | Agregar `while boton.value == False` |
 | Lecturas falsas sin presionar | Ruido electromagnético en cables largos | Acortar cables, agregar condensador 100nF |
 
-### Proyecto artístico — "21 Swings" (Daily tous les jours, Montreal)
+### Proyecto referencia — "sPIral" (Valentina Ruz, Sofía Cartes, Antonia Fuentealba, Sofía Pérez, Estudiantes UDP)
 
-Investigando casos de uso de sensores de entrada simple encontré este proyecto que me pareció una forma muy buena de entender hasta dónde puede escalar la idea detrás de un botón. *21 Swings* es una instalación de arte público en la que 21 columpios musicales están dispuestos en una calle peatonal. Cada columpio lleva sensores que detectan el movimiento del usuario y generan notas musicales en tiempo real. Cuando varias personas se balancean simultáneamente, las notas se combinan y forman una melodía colectiva.
+Uno de los referentes que revisé fue sPIral, un proyecto realizado por compañeras de la carrera. Lo conocí porque mi amigas Vale y Sofi, integrante del grupo, me lo mostró mientras estábamos revisando distintos proyectos relacionados con pantallas y visualización de información. Lo que más me llamó la atención fue cómo utilizan una pantalla OLED para presentar poemas de una forma interactiva y visualmente atractiva, alejándose de la idea de mostrar únicamente texto o datos. Me pareció un buen ejemplo de cómo la programación y la electrónica pueden aportar valor a una propuesta de diseño, transformando una pantalla en una experiencia de interacción. Además, me hizo pensar en las posibilidades creativas que tienen este tipo de actuadores cuando se utilizan más allá de su función técnica básica.
 
-El principio técnico es el mismo: detectar una acción física discreta y convertirla en un evento digital. Lo que cambia es la escala, el contexto y la intención. Eso me hizo entender que el valor de un sensor no está solo en el componente, sino en lo que se construye alrededor de él.
-
-🔗 [Daily tous les jours — 21 Swings](https://www.dailytouslesjours.com/project/21-balancoires)
+<img src="./imagenes/pote.png" alt="tinkercad" width="300">
 
 ---
 
