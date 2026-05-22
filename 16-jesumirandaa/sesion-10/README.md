@@ -16,43 +16,21 @@ Un botón es un **sensor de entrada digital**: su única función es reportar un
 
 En nuestro caso, el botón fue conectado al pin **GP0** de la Raspberry Pi Pico 2W, con resistencia de **pull-up interna** activada por software usando `Pull.UP`. Esto significa que cuando el botón no está presionado, el pin se mantiene "jalado" hacia 3.3V y lee `True`. Al presionar, el pin se conecta a GND y lee `False`. Sin esta resistencia, el pin quedaría "flotando" entre valores y la lectura sería completamente impredecible.
 
-```
-         3.3V
-          │
-    [R pull-up interna]
-          │
-GP0 ──────┤──── lectura del microcontrolador
-          │
-        [BOTÓN]
-          │
-         GND
-```
+|3.3V|sistema|GND|
+|---|---|---|
+|R pull-up interna|-|-|
+|GPO|lectura del microcontrolador|botón|-|
 
 ### Detección por flanco
 
 Algo que aprendí en la práctica es que no basta con saber si el botón está presionado: hay que detectar el **momento exacto en que se presiona**, no el tiempo que se mantiene apretado. A esto se le llama detección por **flanco de bajada** (la transición de `True` a `False`). Si en vez de eso se detectara el nivel (es decir, "está presionado ahora mismo"), el código enviaría mensajes continuamente mientras el dedo está sobre el botón, saturando el feed de Adafruit IO al instante.
 
-```python
-# Detecta solo el instante de presión, no el tiempo sostenido
-if estado_anterior == True and estado_actual == False:
-    mqtt.publish(FEED_BOTON, mensaje)
-```
 
 ### Filtrado — Debounce
 
 El mayor problema técnico que enfrentamos fue el **rebote mecánico** (*bouncing*). Cuando los contactos metálicos del botón se juntan físicamente, no hacen contacto limpio de una vez: vibran durante unos pocos milisegundos antes de estabilizarse. En ese tiempo pueden generarse 5, 10 o más transiciones falsas, lo que haría que un solo toque enviara múltiples mensajes a Adafruit IO.
 
 La solución que implementamos fue **debounce por software**: después de detectar la primera presión, se espera 300ms antes de aceptar otra lectura, y además se espera a que el botón sea soltado completamente:
-
-```python
-time.sleep(0.3)  # Ignorar señales durante 300ms
-
-while boton.value == False:  # Esperar a que se suelte
-    mqtt.loop()
-    time.sleep(0.01)
-```
-
-Existen otras técnicas de filtrado para este problema:
 
 | Técnica | Descripción |
 |--------|-------------|
@@ -100,8 +78,8 @@ Las pantallas OLED tienen una ventaja frente a las LCD tradicionales: **cada pí
 | Protocolo de comunicación | I2C (también existe en SPI) |
 | Dirección I2C | `0x3C` (o `0x3D` según modelo) |
 | Voltaje de operación | 3.3V – 5V |
-| Consumo típico | ~20mA |
-| Tamaño diagonal | ~0.96 pulgadas |
+| Consumo típico | 20mA |
+| Tamaño diagonal | 0.96 pulgadas |
 
 ### Comunicación I2C
 
@@ -138,39 +116,13 @@ void mostrarPantalla(String linea1, String linea2) {
 }
 ```
 
-Un detalle importante que aprendí: la librería trabaja con un **buffer en memoria RAM**. Todo lo que se dibuja con `clearDisplay()`, `println()`, etc., se escribe primero en ese buffer, y solo cuando se llama a `display.display()` se transfiere a la pantalla. Si se olvida esa última línea, la pantalla no muestra nada, aunque el código "funcione" correctamente.
-
-El flujo completo del sistema es:
-
-```
-[Botón presionado — Pico 2W]
-          ↓
-[Mensaje publicado en Adafruit IO via MQTT]
-          ↓
-[Arduino R4 recibe el mensaje]
-          ↓
-[handleMessage() es llamado automáticamente]
-          ↓
-[mostrarPantalla() actualiza el buffer]
-          ↓
-[display.display() envía el buffer a la OLED]
-          ↓
-[Mensaje visible en pantalla]
-```
-
 ### Filtrado y procesamiento de la información
 
 Antes de mostrarse, la información pasa por algunas transformaciones:
 
-1. **Adafruit IO como buffer intermediario:** el feed almacena el último valor publicado. Si hay una caída momentánea de WiFi, el mensaje no se pierde porque el Arduino puede recuperarlo con `botonFeed->get()` al reconectarse.
+1. **Adafruit IO como intermediario:** el feed almacena el último valor publicado. Si hay una caída momentánea de WiFi, el mensaje no se pierde porque el Arduino puede recuperarlo con `botonFeed->get()` al reconectarse.
 2. **`data->toString()`:** el objeto `AdafruitIO_Data` puede contener distintos tipos de datos. La conversión a `String` lo normaliza para usarlo directamente con la librería de la pantalla.
 3. **Límite físico de caracteres:** con `setTextSize(1)`, cada carácter ocupa 6×8 píxeles, lo que permite aproximadamente **21 caracteres por línea** y hasta 8 líneas en pantalla. Mensajes más largos se cortan. En nuestro caso los mensajes eran cortos a propósito, pero en un sistema real habría que agregar lógica de truncado o scroll.
-
-Para scroll, la librería ofrece:
-```cpp
-display.startscrollright(0x00, 0x0F); // Scroll horizontal de toda la pantalla
-display.stopscroll();
-```
 
 ### Capacidades gráficas de la librería
 
