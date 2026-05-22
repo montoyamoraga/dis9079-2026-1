@@ -12,6 +12,8 @@ Durante el trayecto de la clase hicimos las conexiones y probábamos el código,
 
 Luego anotamos todo en la carpeta "00-solemne-02, grupo-01", en donde describimos mejor el proyecto, pero pondré la descripción textual:
 
+## Descripción textual del proyecto
+
 Nuestro proyecto consiste en enviar información entre 2 microcontroladores a través de WiFi, estando separados físicamente.
 
 Para esto usamos una Raspberry Pi Pico 2 W como la placa emisora y un Arduino Uno R4 WiFi como placa receptora. La Raspberry lee los valores de un potenciómetro conectado mediante una protoboard y sube esa información a la nube utilizando Adafruit IO. Por otro lado, el Arduino lee el feed de datos creado en la nube y según el valor que reciba, mueve un servomotor en distintos ángulos.
