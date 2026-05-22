@@ -100,11 +100,11 @@ La información obtenida por el sensor puede representarse mediante:
 
 Por ejemplo, con un sistema de colores:
 
-- **Verde:** aire limpio.
+**Verde:** aire limpio.
 
-- **Amarillo:** calidad intermedia.
+**Amarillo:** calidad intermedia.
 
-- **Rojo:** aire contaminado.
+**Rojo:** aire contaminado.
 
 Transformar números en gráficos facilita la interpretación de la información y permite identificar cambios de manera rápida, incluso para personas sin conocimientos técnicos.
 
