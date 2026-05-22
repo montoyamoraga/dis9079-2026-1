@@ -50,6 +50,205 @@ durante la clase se probo con enviar datos al adafruit
 
 ## Código usado para recibir
 
+    /**************************************************
+     PROYECTO: CONTROL LED DESDE ADAFRUIT IO
+    **************************************************/
+
+    #include "AdafruitIO_WiFi.h"
+
+    // ==========================================
+    // CREDENCIALES WIFI Y ADAFRUIT IO
+    // ==========================================
+
+    #define IO_USERNAME  "TU_USUARIO"
+    #define IO_KEY       "TU_CLAVE_ADAFRUIT"
+
+    #define WIFI_SSID    "NOMBRE_WIFI"
+    #define WIFI_PASS    "CLAVE_WIFI"
+
+    // ==========================================
+    // CONEXIÓN ADAFRUIT IO
+    // ==========================================
+
+    AdafruitIO_WiFi io(
+    IO_USERNAME,
+    IO_KEY,
+    WIFI_SSID,
+    WIFI_PASS
+    );
+
+    // ==========================================
+    // CONFIGURACIÓN
+    // ==========================================
+
+    // Pin LED
+    const int ledPin = 13;
+
+    // Feed
+    AdafruitIO_Feed *controlLED = io.feed("led");
+
+    // ==========================================
+    // SETUP
+    // ==========================================
+
+    void setup() {
+
+    // Iniciar LED
+    pinMode(ledPin, OUTPUT);
+
+    // Monitor serial
+    Serial.begin(115200);
+
+    while(!Serial);
+
+    Serial.println("Conectando a Adafruit IO...");
+
+    // Conexión
+    io.connect();
+
+    // Evento al recibir mensaje
+    controlLED->onMessage(cambiarEstadoLED);
+
+    // Esperar conexión
+    while(io.status() < AIO_CONNECTED) {
+
+    Serial.print(".");
+    delay(500);
+    }
+
+    Serial.println();
+    Serial.println("¡Conectado correctamente!");
+    }
+
+    // ==========================================
+    // LOOP PRINCIPAL
+    // ==========================================
+
+    void loop() {
+
+    // Mantener conexión
+    io.run();
+    }
+
+    // ==========================================
+    // FUNCIÓN PARA PRENDER/APAGAR LED
+    // ==========================================
+
+    void cambiarEstadoLED(AdafruitIO_Data *data) {
+
+    String estado = data->toString();
+
+    Serial.print("Dato recibido: ");
+    Serial.println(estado);
+
+    /**************************************************
+    PROYECTO: CONTROL LED DESDE ADAFRUIT IO
+    **************************************************/
+
+    #include "AdafruitIO_WiFi.h"
+
+    // ==========================================
+    // CREDENCIALES WIFI Y ADAFRUIT IO
+    // ==========================================
+
+    #define IO_USERNAME  "TU_USUARIO"
+    #define IO_KEY       "TU_CLAVE_ADAFRUIT"
+
+    #define WIFI_SSID    "NOMBRE_WIFI"
+    #define WIFI_PASS    "CLAVE_WIFI"
+
+    // ==========================================
+    // CONEXIÓN ADAFRUIT IO
+    // ==========================================
+
+    AdafruitIO_WiFi io(
+    IO_USERNAME,
+    IO_KEY,
+    WIFI_SSID,
+    WIFI_PASS
+    );
+
+    // ==========================================
+    // CONFIGURACIÓN
+    // ==========================================
+
+    // Pin LED
+    const int ledPin = 13;
+
+    // Feed
+    AdafruitIO_Feed *controlLED = io.feed("led");
+
+    // ==========================================
+    // SETUP
+    // ==========================================
+
+    void setup() {
+
+    // Iniciar LED
+    pinMode(ledPin, OUTPUT);
+
+    // Monitor serial
+    Serial.begin(115200);
+
+    while(!Serial);
+
+    Serial.println("Conectando a Adafruit IO...");
+
+    // Conexión
+    io.connect();
+
+    // Evento al recibir mensaje
+    controlLED->onMessage(cambiarEstadoLED);
+
+    // Esperar conexión
+    while(io.status() < AIO_CONNECTED) {
+
+    Serial.print(".");
+    delay(500);
+    }
+
+    Serial.println();
+    Serial.println("¡Conectado correctamente!");
+    }
+
+    // ==========================================
+    // LOOP PRINCIPAL
+    // ==========================================
+
+    void loop() {
+
+    // Mantener conexión
+    io.run();
+    }
+
+    // ==========================================
+    // FUNCIÓN PARA PRENDER/APAGAR LED
+    // ==========================================
+
+    void cambiarEstadoLED(AdafruitIO_Data *data) {
+
+    String estado = data->toString();
+
+    Serial.print("Dato recibido: ");
+    Serial.println(estado);
+
+    // PRENDER LED
+    if(estado == "ON") {
+
+    digitalWrite(ledPin, HIGH);
+
+    Serial.println("LED ENCENDIDO");
+    }
+
+    // APAGAR LED
+    else if(estado == "OFF") {
+
+    digitalWrite(ledPin, LOW);
+
+    Serial.println("LED APAGADO");
+    }
+    }
+
 ## Imágenes del proyecto
 <img width="900" height="1600" alt="WhatsApp Image 2026-05-21 at 19 02 01" src="https://github.com/user-attachments/assets/fc3011c3-77e6-49eb-8ea7-3f1cd5e51e51" />
 
