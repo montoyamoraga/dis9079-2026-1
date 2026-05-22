@@ -17,7 +17,7 @@ La solución es usar resistencias **Pull-up o Pull-down** (que pueden ser intern
 <img width="499" height="350" alt="image" src="https://github.com/user-attachments/assets/46823a8b-e0cb-4f4a-8843-ce8c0452bd15" />
 <img width="499" height="350" alt="image" src="https://github.com/user-attachments/assets/f1fd9b50-6ba3-42b0-a2e2-f985ebde1b99" />
 
-En nuestro proyecto usamos el botón como sensor porque necesitábamos que el *humano* decidiera cuándo mandar la señal, no un temporizador automático.
+En nuestro proyecto usamos el botón como sensor porque necesitábamos que el *usuario* decidiera cuándo mandar la señal, no un temporizador automático.
 
 
 ---
