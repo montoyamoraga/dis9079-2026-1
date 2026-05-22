@@ -9,18 +9,19 @@
 ## Descripción textual del proyecto
 
 ## Materiales usados
-+ Raspberry pi pico 2w
-+ Arduino R4 Wifi
-+ Protoboard
++ Raspberry Pi Pico 2 W 
++ Arduino UNO R4 WiFi 
 + Cables dupont
-+ Botón - pulsador
-+ Pantalla OLED
-+ Cable USB-C
-+ Cable Micro USB
++ Botón pulsador de 4 pines 
++ Pantalla LCD Oled 1.3
++ Protoboard 
+
 ## Sensor usado
-Para el sensor decidimos utilizar un boton - pulsador conectado a nuestra raspberry, permitiendonos enviar el mensaje a la nube con tan solo presionarlo, se presiona cuatro veces para proyectar los cuatro mensajes. 
+Para el sensor decidimos utilizar un botón - pulsador de cuatro pines de 7mm conectado a nuestra Raspberry Pi Pico 2 W, permitiendonos enviar el mensaje a la nube con tan solo presionarlo, se presiona cuatro veces para proyectar los cuatro mensajes. (agregar info)
+
 ## Actuador usado
-Para el actuador utilizamos una panatalla OLED, conectada a nuestro arduino permitiendo así que se proyecten los cuatro mensajes.
+Para el actuador utilizamos una panatalla OLED, conectada a nuestro Arduino UNO R4 WiFi permitiendo así que se proyecten los cuatro mensajes. (agregar más info)
+
 ## Código usado para enviar
 
 ```cpp 
