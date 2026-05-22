@@ -2,6 +2,15 @@
 
 - Marlén Soto / github: [marlensoto-lab](https://github.com/marlensoto-lab)
 
+## ¿Qué es un Sensor?
+Un sensor es todo dispositivo que **detecta un estímulo y genera una señal eléctrica** como respuesta.
+
+El botón pulsador cumple exactamente eso:
+
+- **Estímulo:** presión mecánica del dedo
+- **Respuesta:** señal eléctrica (circuito abierto o cerrado)
+
+Por eso se clasifica como un **sensor mecánico discreto de contacto**, ya que detecta si existe o no una fuerza aplicada sobre él y lo traduce en una señal que un sistema puede leer y procesar.
 ## Sensor Utilizado: Botón Pulsador
 
 ![Botón Pulsador](imagenes/boton_pulsador.jpg)
@@ -12,7 +21,6 @@ El botón pulsador es un componente electrónico que permite abrir o cerrar un c
 
 En este proyecto, el botón funciona como una “puerta lógica” que permite controlar cuándo se envían datos desde una Raspberry Pi Pico 2W hacia Adafruit IO, evitando enviar datos constantemente y previniendo la sobrecarga del servidor.
 
----
 
 ###  ¿Cómo funciona?
 
@@ -29,8 +37,6 @@ Funcionamiento del sistema:
 4. El Arduino Uno R4 WiFi recibe la información.
 5. Un LED indica visualmente el estado del sistema.
 
----
-
 ## Aprendizajes sobre el uso del sensor
 
 Durante el desarrollo del proyecto se aprendió:
@@ -41,7 +47,6 @@ Durante el desarrollo del proyecto se aprendió:
 - Cómo conectar dispositivos IoT mediante WiFi.
 - Cómo utilizar Adafruit IO para comunicación en tiempo real.
 
----
 
 ##  Filtrado de Información
 
@@ -59,7 +64,6 @@ Esto permite:
 - Mejorar estabilidad.
 - Reducir tráfico innecesario hacia Adafruit IO.
 
----
 
 ##  Visualización de Datos
 
@@ -77,7 +81,6 @@ Ejemplos:
 - “Sistema detenido”
 - “Botón presionado”
 
----
 
 ##  Problemas Comunes
 
@@ -89,7 +92,6 @@ Ejemplos:
 | Retardo en respuesta | Problemas de WiFi |
 | Error en Adafruit IO | Exceso de envíos |
 
----
 
 ##  Aplicaciones Reales
 
@@ -102,8 +104,6 @@ Los botones pulsadores son utilizados en:
 - Controles industriales
 - Ascensores inteligentes
 
----
-
 ##  Empresa o Proyecto Relacionado
 
 ## Amazon Dash Button
@@ -111,13 +111,10 @@ Los botones pulsadores son utilizados en:
 
 Amazon desarrolló botones inteligentes llamados “Dash Buttons”, los cuales permitían ejecutar acciones automáticas al ser presionados mediante conexión a internet.
 
----
-
 ##  Conclusión
 
 El botón pulsador es un sensor simple pero fundamental en electrónica e IoT. Permite controlar procesos físicos y optimizar sistemas conectados a internet, evitando errores y mejorando la eficiencia del envío de información.
 
----
 
 ## Actuador
 ###  Actuador Utilizado: LED Indicador
@@ -130,7 +127,6 @@ El LED (Light Emitting Diode) es un actuador electrónico que transforma energí
 
 En este proyecto, el LED funciona como indicador visual del estado del envío de datos.
 
----
 
 ##  ¿Cómo funciona?
 
@@ -147,7 +143,6 @@ Estados posibles:
 - LED encendido → envío activo.
 - LED apagado → sistema detenido.
 
----
 
 ##  Aprendizajes sobre el actuador
 
@@ -158,7 +153,6 @@ Durante el proyecto se aprendió:
 - Cómo representar información visualmente.
 - Cómo mejorar la interacción usuario-sistema.
 
----
 
 ##  Filtrado de Información
 
@@ -173,8 +167,6 @@ Esto ayuda a:
 - Mejorar estabilidad visual.
 - Facilitar interpretación del estado del sistema.
 
----
-
 ##  Visualización de Datos
 
 El LED permite representar:
@@ -184,7 +176,6 @@ El LED permite representar:
 - Envío de datos
 - Alertas o errores
 
----
 
 ##  Problemas Comunes
 
@@ -196,7 +187,6 @@ El LED permite representar:
 | Sobrecalentamiento | Exceso de voltaje |
 | No responde | Mala conexión |
 
----
 
 # Aplicaciones Reales
 
@@ -209,8 +199,6 @@ Los LEDs son utilizados en:
 - Indicadores de estado
 - Dispositivos inteligentes
 
----
-
 ##  Empresa o Proyecto Relacionado
 
 ## Philips Smart Lighting
@@ -221,8 +209,6 @@ Philips utiliza sistemas LED inteligentes en proyectos de:
 - Hogares inteligentes
 - Señalización automatizada
 - Tecnología IoT
-
----
 
 ##  Conclusión
 
