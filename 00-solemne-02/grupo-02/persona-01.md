@@ -2,8 +2,6 @@
 **Marlén Soto**  
 Github:marlensoto-lab   
 
----
-
 # El Sensor: Pulsador (Botón)
 
 ![Botón Pulsador](imagenes/boton_pulsador.jpg)
@@ -66,15 +64,6 @@ Además, estos dispositivos también necesitaban controlar problemas similares a
 
 ---
 
-### Flic Smart Button
-
-Flic es un botón inalámbrico utilizado en hospitales, hogares y sistemas de emergencia. Su funcionamiento consiste en enviar una alerta instantánea mediante WiFi o Bluetooth al momento de ser presionado.
-
-Este referente demuestra cómo un sensor tan simple como un botón puede utilizarse en aplicaciones críticas y de gran importancia, utilizando la misma arquitectura básica que trabajamos en clases:
-presión → envío de señal → respuesta del sistema.
-
----
-
 # El Actuador: LED
 
 ![LED](imagenes/Luz_led.jfif)
@@ -116,8 +105,6 @@ Utilizar una resistencia demasiado baja puede provocar sobrecorriente, dañando 
 
 ## 4. Referente: The Bay Lights — Leo Villareal
 
-![The Bay Lights](https://upload.wikimedia.org/wikipedia/commons/5/5e/The_Bay_Lights.jpg)
-
 “The Bay Lights” es una instalación artística creada por Leo Villareal que utilizó miles de LEDs distribuidos en el puente Bay Bridge de San Francisco para generar patrones lumínicos dinámicos mediante programación.
 
 Lo interesante de este referente es que utiliza exactamente el mismo principio trabajado en nuestro proyecto:
@@ -127,44 +114,4 @@ La diferencia está únicamente en la escala, ya que mientras nuestro proyecto c
 
 ---
 
-# Referencias
-
-- SparkFun Electronics — Pull-up y Pull-down resistors  
-- SparkFun Electronics — Guía completa sobre LEDs  
-- MQTT Protocol Explained  
-- Amazon Dash Buttons — Wikipedia  
-- Flic Smart Button — Official Website  
-- Leo Villareal — The Bay Lights  
-- Arduino Documentation  
-- Adafruit IO Documentation  
-
-
-
-![LED](imagenes/Luz_led.jfif)
-
-
 ## Bibliografía
-
-- Arduino. (2025). *Arduino Official Website*. Recuperado de: https://www.arduino.cc/
-
-- Adafruit Industries. (2025). *Adafruit IO Documentation*. Recuperado de: https://io.adafruit.com/
-
-- Raspberry Pi Foundation. (2025). *Raspberry Pi Pico W Documentation*. Recuperado de: https://www.raspberrypi.com/documentation/
-
-- ESPRESSIF Systems. (2025). *ESP32 Series Datasheet*. Recuperado de: https://www.espressif.com/
-
-- Philips. (2025). *Smart Lighting Systems*. Recuperado de: https://www.philips.com/
-
-- Amazon. (2025). *Amazon Dash Button Technology*. Recuperado de: https://www.amazon.com/
-
-- HC-SR04 Ultrasonic Sensor Datasheet. (2025). Recuperado de: https://datasheetspdf.com/
-
-- Servo Motor SG90 Datasheet. (2025). Recuperado de: https://components101.com/
-
-- Wikipedia. (2025). *Push-button*. Recuperado de: https://en.wikipedia.org/wiki/Push-button
-
-- Wikipedia. (2025). *Light-emitting diode*. Recuperado de: https://en.wikipedia.org/wiki/Light-emitting_diode
-
-- Firebase. (2025). *Firebase Realtime Database*. Recuperado de: https://firebase.google.com/
-
-- Google Developers. (2025). *Google Maps Platform*. Recuperado de: https://mapsplatform.google.com/
