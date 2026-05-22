@@ -25,7 +25,7 @@ Finalmente, debido a la falta de tiempo para continuar avanzando con nuestro pro
 ## Materiales usados en clases 
 | Material | Cantidad | Precio aproximado (CLP) |
 |---|---:|---:|
-| Raspberry Pi | 1 | $151.790 |
+| Raspberry Pi Pico 2W | 1 | $15.990 |
 | Arduino UNO R4 WiFi | 1 | $34.990 |
 | HC-SR04 Ultrasonic Sensor | 1 | $3.290 |
 | SG90 Micro Servo Motor | 1 | $1.830 |
@@ -50,7 +50,110 @@ El actuador utilizado en el proyecto fue una luz LED, empleada para representar 
 
 Su función principal dentro del sistema es encenderse o apagarse dependiendo del estado del botón conectado a la Raspberry Pi Pico 2W, permitiendo demostrar la comunicación inalámbrica y el control remoto de actuadores en tiempo real mediante tecnologías IoT.
 ## Código usado para enviar
+```
+import time
+import board
+import digitalio
+import wifi
+import socketpool
+import adafruit_minimqtt.adafruit_minimqtt as MQTT
 
+print("Iniciando programa...")
+
+# -------------------------
+# WiFi
+# -------------------------
+SSID = "auxilio"
+PASSWORD = "cabal123"
+
+print("Conectando WiFi...")
+
+try:
+    wifi.radio.connect(SSID, PASSWORD)
+    print("WiFi conectado")
+    print("IP:", wifi.radio.ipv4_address)
+
+except Exception as e:
+    print("Error WiFi:")
+    print(e)
+    while True:
+        pass
+
+# -------------------------
+# Adafruit IO
+# -------------------------
+AIO_USERNAME = "udpmontoyamoraga"
+AIO_KEY = "clavecredencial"
+
+FEED_BOTON = AIO_USERNAME + "/feeds/boton-prueba-grupo10"
+
+print("Creando conexión MQTT...")
+
+pool = socketpool.SocketPool(wifi.radio)
+
+mqtt = MQTT.MQTT(
+    broker="io.adafruit.com",
+    username=AIO_USERNAME,
+    password=AIO_KEY,
+    socket_pool=pool,
+)
+
+print("Conectando a Adafruit IO...")
+
+try:
+    mqtt.connect()
+    print("Conectado a Adafruit IO")
+
+except Exception as e:
+    print("Error MQTT:")
+    print(e)
+    while True:
+        pass
+
+# -------------------------
+# Botón GP0
+# -------------------------
+boton = digitalio.DigitalInOut(board.GP0)
+boton.direction = digitalio.Direction.INPUT
+boton.pull = digitalio.Pull.UP
+
+estado_anterior = True
+
+print("Sistema listo")
+
+# -------------------------
+# Loop principal
+# -------------------------
+while True:
+    try:
+        mqtt.loop()
+        estado_actual = boton.value
+
+        # presionado -> envía 1
+        if estado_anterior and not estado_actual:
+            print("Botón presionado")
+            mqtt.publish(FEED_BOTON, "1")
+            print("Enviado: 1")
+            time.sleep(0.25)  # anti-rebote
+
+        # soltado -> envía 0
+        if not estado_anterior and estado_actual:
+            print("Botón soltado")
+            mqtt.publish(FEED_BOTON, "0")
+            print("Enviado: 0")
+            time.sleep(0.25)  # anti-rebote
+
+        estado_anterior = estado_actual
+
+    except Exception as e:
+        print("Error, reconectando:", e)
+        try:
+            mqtt.reconnect()
+        except:
+            pass
+
+    time.sleep(0.02)
+```
 ### Proceso
 Durante las primeras pruebas realizamos la ejecución del código inicial, pero el sistema no funcionó correctamente, ya que la luz LED no lograba encenderse. Debido a esto, fue necesario revisar y modificar el código para identificar el problema.
 
@@ -59,9 +162,84 @@ Con ayuda de nuestro compañero, nos dimos cuenta de que nuestra Raspberry Pi Pi
 Además, observamos que la visualización del proyecto en Visual Studio Code aparecía con el ícono de Adobe Illustrator, lo que inicialmente nos generó confusión respecto al tipo de archivo y su configuración dentro del programa. Luego de revisar esto, continuamos realizando ajustes hasta lograr avanzar correctamente con el desarrollo del proyecto.
 ![VisualStudioCode](imagenes/Visualizacion.jpg)
 ## Código usado para recibir 
+```
+/*************************************************************
+   PROYECTO: RECEPTOR ARDUINO (ESPEJO DE BOTÓN)
+*************************************************************/
+#include "AdafruitIO_WiFi.h"
 
+// ==========================================
+// CREDENCIALES
+// ==========================================
+#define IO_USERNAME  "udpmontoyamoraga"
+#define IO_KEY       
+#define WIFI_SSID    "marce"
+#define WIFI_PASS    "marce1234"
+
+// ==========================================
+// CONFIGURACIÓN
+// ==========================================
+
+// Instancia Adafruit IO
+AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+
+// Pin del LED
+const int ledPin = 13;
+
+// Feed (debe ser el mismo que usa la Raspberry)
+AdafruitIO_Feed *botonFeed = io.feed("boton-prueba-grupo10");
+
+// ==========================================
+// SETUP
+// ==========================================
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(115200);
+
+  Serial.print("Conectando a Adafruit IO...");
+  io.connect();
+
+  // Función que reaccionará a los datos
+  botonFeed->onMessage(handleMessage);
+
+  // Esperar conexión
+  while(io.status() < AIO_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println();
+  Serial.println("¡Arduino Conectado!");
+}
+
+// ==========================================
+// LOOP
+// ==========================================
+void loop() {
+  // Mantener conexión activa
+  io.run();
+}
+
+// ==========================================
+// FUNCIÓN QUE RECIBE DATOS
+// ==========================================
+void handleMessage(AdafruitIO_Data *data) {
+  // Convertir dato recibido a entero
+  int comando = data->toInt();
+
+  // Si recibe 1 -> prender LED
+  if (comando == 1) {
+    digitalWrite(ledPin, HIGH);
+    Serial.println("LED ON");
+  }
+  // Si recibe 0 -> apagar LED
+  else {
+    digitalWrite(ledPin, LOW);
+    Serial.println("LED OFF");
+  }
+}
+```
 ### Proceso
-
 Al inicio de la sesión, realizamos una prueba utilizando un código desarrollado previamente por nuestra compañera, el cual ya había sido verificado y funcionaba correctamente. Posteriormente, decidimos desarrollar el proceso por nuestra cuenta, lo que derivó en una serie de errores, principalmente relacionados con el cableado.
 
 El primer inconveniente fue la conexión de alimentación: el cable estaba conectado a 5V, cuando lo correcto era utilizar 13V, ya que la conexión inicial solo permitía verificar el funcionamiento del LED, pero no era la adecuada para el comportamiento esperado del sistema.
@@ -71,12 +249,14 @@ Una vez corregido ese punto, nos encontramos con un segundo problema: el LED no 
 
 Finalmente, determinamos que el problema no estaba en el código, sino en la configuración interna de la Raspberry Pi Pico 2W. El dispositivo había sido modificado previamente y solo mantenía activa la señal de encendido del LED (valor `1`), mientras que la señal de apagado (valor `0`) no funcionaba correctamente. Al identificar este origen, volvimos al código inicial y pudimos continuar con el desarrollo del proyecto.
 
-Como resultado, se logró establecer exitosamente la conexión entre la Raspberry Pi Pico 2W y el LED, completando el objetivo de la práctica.
+Como parte adicional de la práctica, quisimos comprobar si el sistema funcionaba a larga distancia. Para ello, fue necesario conectarnos a una red distinta, ya que al alejarnos del punto de acceso original la señal se debilitaba al punto de desconectarse. Al cambiar de red logramos mantener una conexión estable y verificar que el sistema respondía correctamente incluso a mayor distancia.
+
 ![Arduino](imagenes/arduino_conectado.jpg)
 <img width="1825" height="865" alt="arduino_conectado" src="https://github.com/user-attachments/assets/7c703236-4e96-40bb-b194-9d0e745d945c" />
 
 ![Arduino](imagenes/prueba1.jpg)
 ## Imágenes del proyecto
+Pruebas realizas de larga distancia
 
 ## Animaciones del proyecto
 
