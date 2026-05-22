@@ -78,3 +78,29 @@ void loop() {
   Serial.println(lectura);
 }
 ```
+
+### Servo con potenciometro
+```cpp
+#include <Servo.h>
+
+Servo miServo;
+
+int lectura = 0;
+int angulo = 0;
+
+void setup() {
+  Serial.begin(9600);
+  miServo.attach(9);
+}
+
+void loop() {
+  lectura = analogRead(A0);
+
+  Serial.println(lectura);
+
+  angulo = map(lectura, 0, 1023, 0, 180);
+  miServo.write(angulo);
+
+  delay(15);
+}
+```
