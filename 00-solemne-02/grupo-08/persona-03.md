@@ -1,6 +1,6 @@
 # investigaciones individuales
 
-Valentina Ruz / github
+Valentina Ruz / [github](https://github.com/vxlentiinaa)
 
 ## Investigación
 
