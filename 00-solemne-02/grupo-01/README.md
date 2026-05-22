@@ -67,6 +67,10 @@ Es el monitor del proyecto, utilizada para mostrar la información recibida del 
 
 ![Proceso 5](./imagenes/ejemplo5.gif)
 
+## Proceso y errores
+
+En el proceso es importante tener cuidado en los pequeños detalles ya que si no se les da la importancia necesaria puede no funcionar el proyecto, como en nuestro caso que tuvimos un fallo al conectar mal los jumpers con los pines de la Raspberry Pi Pico 2 W y eso daba un error desconocido en la pantalla del código que, con la ayuda de la IA y fijándonos mejor dónde debía conectarse cada cable, pudimos solucionar esto en la parte de la protoboard que tiene las conexiones del sensor.
+
 ## Bibliografía
 
 - Adafruit Learning System. (s.f.). Monochrome OLED breakouts. Adafruit Industries.
