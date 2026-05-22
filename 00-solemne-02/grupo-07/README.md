@@ -4,7 +4,7 @@
 
 - Benjamín Álvarez - [benjaminalvarez21](https://github.com/benjaminalvarez21)
 - Anays Cornejo - [Anaysval](https://github.com/Anaysval)
-- Agustina Aceituno - 
+- Agustina Aceituno - [agustinaaceituno](https://github.com/agustinaaceituno)
 - Antonia Fuentealba - [AntFuentealba](https://github.com/AntFuentealba)
   
 ## Descripción textual del proyecto
@@ -636,6 +636,23 @@ void loop() {
 ## Imágenes del proyecto
 
 ## Animaciones del proyecto
+### Frames
+
+![frame1](imagenes/frame1.jpeg)
+
+
+![frame2](imagenes/frame2.jpeg)
+
+
+![frame3](imagenes/frame3.jpeg)
+
+
+![frame4](imagenes/frame4.jpeg)
+
+
+
+### Loop:
 ![alien_loop](imagenes/alien_loop.gif)
+
 
 ## Bibliografía
