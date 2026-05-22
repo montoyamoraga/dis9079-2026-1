@@ -9,8 +9,25 @@ En lo personal durante el proceso me senti super frustrada al no comprender del 
 
 Un sensor es todo aquello que tiene una propiedad sensible a una magnitud del medio, y al variar esta magnitud también varía con cierta intensidad la propiedad, es decir, manifiesta la presencia de dicha magnitud, y también su medida.
 
-Existen 12 tipos de sensores, que miden y detectan distintos tipos de variables 
+Existen 12 tipos de sensores, que miden y detectan distintos tipos de variables
+
+* Sensor de temperatura
+* Sensores de luz
+* Sensores de distancia
+* Sensores de proximidad
+* Sensores de posición
+* Sensores de color
+* Sensores de la humedad
+* Sensores de velocidad
+* Sensores de sonido
+* Sensores de contacto
+* Sensores ópticos
+* Sensores magneticos
+
+
 
 ## Actuador
 
 ## Bibliografía
+
+Ruiz, L. Abril, 2026. *Los 12 tipos de sensores: sus características y funciones*. https://psicologiaymente.com/miscelanea/tipos-de-sensores
