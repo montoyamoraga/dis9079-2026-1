@@ -218,7 +218,7 @@ Después de varios intentos de intentar conectarse al wifi, finalmente la placa 
 ![gif](./imagenes/RaspberryArduinogif.gif)
 
 ## Avance en clases Marlén Soto y Marcela Zúñiga
-## Descripción textual del proyecto Trabajo en clases 
+
 Inicialmente, nuestro proyecto consistía en desarrollar un sistema IoT distribuido utilizando una Raspberry Pi, un Arduino UNO R4 WiFi, un sensor ultrasónico HC-SR04 y un micro servo motor SG90, conectados mediante la plataforma Adafruit IO utilizando el protocolo MQTT.
 
 La Raspberry Pi tendría la función de controlar el sensor ultrasónico HC-SR04, medir la distancia de un objeto y enviar periódicamente los datos obtenidos hacia Adafruit IO a través de internet. Posteriormente, el Arduino UNO R4 WiFi consultaría la información almacenada en la plataforma y, según la distancia recibida, controlaría el movimiento del servo motor SG90.
