@@ -72,8 +72,10 @@ Una vez corregido ese punto, nos encontramos con un segundo problema: el LED no 
 Finalmente, determinamos que el problema no estaba en el código, sino en la configuración interna de la Raspberry Pi Pico 2W. El dispositivo había sido modificado previamente y solo mantenía activa la señal de encendido del LED (valor `1`), mientras que la señal de apagado (valor `0`) no funcionaba correctamente. Al identificar este origen, volvimos al código inicial y pudimos continuar con el desarrollo del proyecto.
 
 Como resultado, se logró establecer exitosamente la conexión entre la Raspberry Pi Pico 2W y el LED, completando el objetivo de la práctica.
-![Arduino](imagenes/arduino_conectado.png)
-![Arduino](imagenes/prueba1.png)
+![Arduino](imagenes/arduino_conectado.jpg)
+<img width="1825" height="865" alt="arduino_conectado" src="https://github.com/user-attachments/assets/7c703236-4e96-40bb-b194-9d0e745d945c" />
+
+![Arduino](imagenes/prueba1.jpg)
 ## Imágenes del proyecto
 
 ## Animaciones del proyecto
