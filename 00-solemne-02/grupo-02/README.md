@@ -37,9 +37,18 @@ Finalmente, debido a la falta de tiempo para continuar avanzando con nuestro pro
 ## Descripción textual del proyecto
 
 ## Sensor usado
+### Botón pulsador de 4 pines
+
+El sensor utilizado en esta etapa del proyecto fue un botón pulsador de 4 pines, empleado como entrada digital para activar o desactivar el envío de datos hacia Adafruit IO.
+
+Su función principal dentro del sistema es actuar como una “puerta de control”, permitiendo decidir cuándo la Raspberry Pi Pico 2W puede enviar información a la nube. De esta manera, se evita la saturación del servidor gratuito de Adafruit IO y se optimiza la comunicación entre los dispositivos IoT.
 
 ## Actuador usado
+### Luz LED
 
+El actuador utilizado en el proyecto fue una luz LED, empleada para representar visualmente la recepción de datos enviados desde la Raspberry Pi Pico 2W hacia el Arduino UNO R4 WiFi mediante Adafruit IO.
+
+Su función principal dentro del sistema es encenderse o apagarse dependiendo del estado del botón conectado a la Raspberry Pi Pico 2W, permitiendo demostrar la comunicación inalámbrica y el control remoto de actuadores en tiempo real mediante tecnologías IoT.
 ## Código usado para enviar
 
 ## Código usado para recibir
