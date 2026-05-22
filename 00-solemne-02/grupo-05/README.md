@@ -197,6 +197,26 @@ Luego de hacer correr el código nos dimos cuenta de que no estaba respondiendo 
 
 Para este proyecto se utilizó un potenciómetro y un push button como sensor. El push button cumple la función de decidir cuándo enviar información que genera el potenciómetro la cual va cambiando cada vez que uno lo mueve.
 
+#### Push button
+
+Al inicio, el push button que estábamos utilizando era el siguiente:
+
+![Push button grande](./imagenes/primer-pushbutton.png)
+
+Este botón se utilizó desde la primera prueba del código hasta el día en el cual tuvimos clases presenciales, en donde nos dejó de responder y Mateo nos recomendó cambiar el botón debido a que los de este tipo suelen soltarse solos de la protoboard, lo cual nos podía arruinar las cosas sin siquiera darnos cuenta. Como se nos recomendó hacer un cambio, empezamos a probar con el siguiente botón:
+
+![Push button pequeño](./imagenes/segundo-pushbutton.png)
+
+Cuando hicimos el cambio a éste push button, fue cuando ya habíamos logrado correr el código en donde el botón cumplia su función de filtrar la información con el sistema "push down", por lo cual lo utilizamos durante todo lo que restaba de clase, pero cuando volvimos a probarlo un día después nos dimos cuenta de que ya no respondía el botón. Como no nos funcionaba el botón, decidimos probar con el código que nos dio Mateo para ver si había algún problema con la conexión, pero cuando lo probamos nos dimos cuenta de que en realidad el problema era el botón, razón por la cual decidimos volver a cambiar el botón por el siguiente, que es el actual de nuestro proyecto:
+
+![Botón actual](./imagenes/pushbutton-actual.png)
+
+Todos los push buttons que utilizamos en éste proyecto son botones de 4 pines, los cuales como menciona su nombre funcionan como botones pulsadores, es decir, que estos solo responden mientras uno los mantiene presionados (así como funcionan los timbres de las casas).
+
+#### Potenciómetro
+
+
+
 ## Actuador usado
 
 Nuestros actuadores en este proyecto son el Micro Servo Motor SG90 9g y una luz LED, en donde el LED cumple la función de detectar cuando estamos presionando el push button, es decir, cuándo estamos permitiendo que se envíe información. En cambio con el motor servo, este se encarga de recibir la información que le envía el potenciómetro y reacciona en base a este. -- NO SÉ QUE MÁS PONER ASI QUE TAMBIÉN REDACTAR MEJOR PLS AYUDA
@@ -392,4 +412,4 @@ void MQTT_connect() {
 
 + <https://www.youtube.com/watch?v=d_odoKbEjgg&t=120s>, en donde nos enseñan cómo conectar un push button a una raspberry.
 + <https://www.instructables.com/Control-LED-From-Internet-Using-Raspberry-Pi-Pico-/>, en donde nos enseñan cómo conectar un LED a una raspberry.
-+ 
++ <https://www.sameskydevices.com/blog/push-button-switches-101>, en donde se nos habla de los botones pulsadores y de los interruptores.
