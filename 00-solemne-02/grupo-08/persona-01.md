@@ -42,14 +42,6 @@ Lo que queremos realizar en la solemne 2 es que desde la Raspberry pi envíe dat
 
 ---
 
-#### Arduino UNO R4 Wifi
-
-- Recibe "ON" -> Enciende LED verde (D2), apaga rojo
-- Recibe "OFF" -> enciende LED rojo (D3), apaga verde
-- Al arrancar, ambos LEDS parpadean 3 veces para confirmar que l aconexión fue existosa
-
----
-
 NO OLVIDAR!
 
 TU_NOMBRE_WIFI / TU_CLAVE_WIFI
