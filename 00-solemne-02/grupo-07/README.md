@@ -642,5 +642,20 @@ void loop() {
 ### Loop:
 ![alien_loop](imagenes/alien_loop.gif)
 
-
 ## Bibliografía
+- <https://www.youtube.com/watch?v=HxjvP9m-hRo>
+- <https://www.330ohms.com/blog/explora-3/que-es-un-sensor-pir-y-como-funciona-8>
+- Javl. Image2cpp.
+ https://javl.github.io/image2cpp/
+- Adafruit Industries. Monochrome OLED Breakouts: Arduino Library and Examples.
+ https://learn.adafruit.com/monochrome-oled-breakouts/arduino-library-and-examples
+- Huy Khoong. gif2cpp.
+ https://github.com/huykhoong/gif2cpp
+- Random Nerd Tutorials. ESP32/Arduino OLED Display Guide.
+https://randomnerdtutorials.com/guide-for-oled-display-with-arduino/ 
+- SparkFun Electronics. PIR Motion Sensor Hookup Guide.
+https://learn.sparkfun.com/tutorials/pir-motion-sensor-hookup-guide/all
+- Adafruit. (s.f.). Adafruit IO documentation. Adafruit Learning System. 
+https://io.adafruit.com/
+- Soldered Electronics. (s.f.). SSD1306 OLED display overview. Soldered Documentation. 
+https://docs.soldered.com/ssd1306/overview/
