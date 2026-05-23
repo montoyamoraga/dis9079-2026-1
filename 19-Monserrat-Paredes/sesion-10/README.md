@@ -50,7 +50,8 @@ NO OLVIDAR!
 
 Después decidimos cambiarlo 
 
-Investigación 2
+
+## Investigación
 
 Lo que queremos realizar en la solemne 2 es que desde la Raspberry pi envíe datos mediante un potenciómetro hacía el Arduino y que este encienda una luz y mueva un servomotor. Los datos enviados se verán reflejados en el feed de Adafruit.
 
