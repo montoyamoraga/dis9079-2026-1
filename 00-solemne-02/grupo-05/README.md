@@ -417,6 +417,9 @@ void MQTT_connect() {
 
 ## Animaciones del proyecto
 
+![Potenciometro](./imagenes/potenciometro_funcionando.gif)
+
+
 ## Bibliografía
 
 + <https://www.youtube.com/watch?v=d_odoKbEjgg&t=120s>, en donde nos enseñan cómo conectar un push button a una raspberry.
