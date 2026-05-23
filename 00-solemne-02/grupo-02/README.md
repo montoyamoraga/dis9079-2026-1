@@ -432,3 +432,18 @@ Pruebas realizas de larga distancia
 ## Animaciones del proyecto
 
 ## Bibliografía
+
+1. Arduino. *Arduino UNO R4 WiFi Documentation*.  
+https://docs.arduino.cc/hardware/uno-r4-wifi/
+
+2. Raspberry Pi Foundation. *Raspberry Pi Pico Documentation*.  
+https://www.raspberrypi.com/documentation/microcontrollers/
+
+3. Adafruit IO. *Official Documentation*.  
+https://io.adafruit.com/
+
+4. CircuitPython. *Official Documentation*.  
+https://circuitpython.org/
+
+5. Microsoft. *Visual Studio Code Documentation*.  
+https://code.visualstudio.com/docs
