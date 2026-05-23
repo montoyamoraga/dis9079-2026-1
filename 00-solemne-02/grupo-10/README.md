@@ -651,6 +651,7 @@ En el caso del Arduino, nos enfocamos en la gestión de dependencias y el flujo 
 <img width="330" height="260" alt="image" src="https://github.com/user-attachments/assets/9705532f-223a-4205-b864-7d31bcac80bc" />
 
 **Imagen 20, 21 y 22** *En las imágenes se puede demostrar el orden de las carpetas y la correcta configuración del entorno de desarrollo. Se observa cómo la gestión de dependencias y el flujo del programa son clave para que el Arduino UNO R4 WiFi se comunique sin errores con la plataforma Adafruit IO.*
+
 ---
 
 ### 2. Pruebas de Distancia y Obstáculos (Stress Test)
