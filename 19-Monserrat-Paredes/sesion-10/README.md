@@ -41,6 +41,7 @@ y que este encienda una luz o emita algún sonido.
 - Recibe "OFF" -> enciende LED rojo (D3), apaga verde
 - Al arrancar, ambos LEDS parpadean 3 veces para confirmar que l aconexión fue existosa
 
+
 NO OLVIDAR!
 
 TU_NOMBRE_WIFI / TU_CLAVE_WIFI
@@ -269,10 +270,15 @@ Instalación robótica que presenta la documentación de una actuación de una a
 
 
 Tecnologías utilizadas:
+
 - Arduino.
+
 - biosensores.
+  
 - servomotores.
+  
 - microcontroladores.
+
 - sistemas de sonido robótico.
   
 Es interesante, ya que trabaja directamente con emociones humanas convertidas en comportamiento robótico, eso genera una experiencia mucho más sensible y perturbadora.
@@ -346,7 +352,9 @@ Puede girar normalmente entre 0° y 180°, dependiendo de la señal enviada desd
 ### El servo posee tres conexiones:
 
 - Alimentación (5V).
+  
 - Tierra (GND).
+  
 - Señal PWM.
 
 El microcontrolador envía pulsos PWM (modulación por ancho de pulso), y el servo interpreta estos pulsos como posiciones angulares específicas.
@@ -355,7 +363,9 @@ El microcontrolador envía pulsos PWM (modulación por ancho de pulso), y el ser
 Por ejemplo:
 
 0° → posición inicial.
+
 90° → posición media.
+
 180° → posición máxima.
 
 Esto permite controlar movimientos precisos de manera simple y eficiente.
@@ -448,4 +458,62 @@ Moritz Simon Geist es un artista visual, investigador y productor musical cuyo t
 Con una sólida formación en física de semiconductores y robótica, Geist deconstruye sistemas técnicos complejos para investigar la fragilidad de los materiales y el comportamiento algorítmico. Su evolución artística ha pasado de instalaciones cinéticas performativas a esculturas autónomas a gran escala que utilizan inteligencia artificial y visión artificial para interactuar con su entorno.
 
 
+Trabaja mezclando:
 
+- robótica.
+
+- música experimental.
+
+- actuadores.
+
+- sonido físico.
+
+- inteligencia artificial.
+
+Su trabajo busca crear música utilizando máquinas reales en vez de sonido digital
+
+
+Sobre el proyecto:
+
+“Vibrations” es un enorme instrumento robótico autónomo inspirado en un vibráfono.
+
+La instalación sonora cinética "VIBRATIONS" reflexiona sobre la espacialidad y la contemplación.
+
+Ninguno de los sonidos de este instrumento es interpretado por humanos, sino por 36 pequeños actuadores robóticos. La mecánica introduce ligeras variaciones en el sonido y el ritmo, que resultan orgánicas en contraste con los sonidos generados por ordenador. Por otro lado, los robots son lo suficientemente precisos como para reproducir estructuras repetitivas que ningún ser humano podría reproducir. Esto crea una nueva forma sonora («música electrónica robótica») que es a la vez orgánica y mecánica.
+
+
+Tecnologías utilizadas:
+
+- actuadores robóticos.
+
+- motores de precisión.
+
+- sistemas MIDI.
+
+- control computacional.
+
+- algoritmos generativos.
+
+- estructuras mecánicas sonoras.
+
+- iluminación LED sincronizada.
+
+
+Es interesante, ya que convierte la robótica en una experiencia física y sonora extremadamente humana.
+
+Los robots producen pequeñas imperfecciones mecánicas imposibles de replicar digitalmente, haciendo que la música se sienta viva, repetitiva y orgánica al mismo tiempo.
+
+
+Imágenes del proyecto:
+
+
+<img width="513" height="351" alt="Moritz01" src="https://github.com/user-attachments/assets/e45e43b9-ec55-4669-a60e-4bd444d8586d" />
+
+
+<img width="646" height="441" alt="Moritz02" src="https://github.com/user-attachments/assets/a4eddcc1-009e-4f65-99a3-cb925f138bc1" />
+
+
+
+### Código que envía, en Raspberry PI Pico 2 W
+
+## Código que envía, en Raspberry PI Pico 2 W
