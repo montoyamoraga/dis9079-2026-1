@@ -400,7 +400,6 @@ void loop() {
 <img src="./imagenes/fotoproyecto.jpeg" alt="install" width="500">
 
 
-
 <img src="./imagenes/raspirosa.jpeg" alt="install" width="500">
 
 
@@ -417,7 +416,11 @@ void loop() {
 
 <img src="./imagenes/enviar.gif " alt="install" width="500">
 
+Enviando 
+
 <img src="./imagenes/recibir.gif " alt="install" width="500">
+
+Recibiendo
 
 
 
