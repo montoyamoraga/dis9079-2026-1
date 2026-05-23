@@ -224,6 +224,8 @@ El sistema es controlado mediante un microcontrolador Arduino, el cual envía se
 
 ### AND-Y (wujuu!!)
 
+<img src="./imagenes/sofia_imagenes/AND-Y.jpg" alt="andy" width="200">
+
 - Robot interactivo que te invita reflexionar de manera lúdica sobre nuestras relaciones con las máquinas
 - And-y, nace a partir del siguiente encargo: crear una máquina saludadora. Con eso en mente, diseñamos un robot que genera una experiencia interactiva, donde en cada fase tiene una respuesta diferente. And-y funciona mediante los inputs de sensores ultrasónicos, generando outputs como servo motor, motor joystick y mp3. Cada etapa del proyecto implicó diversas dificultades, aciertos, bocetos, pruebas y prototipos.
 
@@ -255,7 +257,7 @@ int patitaServo = 13; // pin de conexión
   else dedo.bajar();
 ```
 
-**Código que recibe, en Arduino IDE**
+### Código que recibe, en Arduino IDE
 
 Luego, en el código que recibe. El arduino lee estos valores y procede a mover el servomotor, cuando llegue a un ángulo límite, se prende una luz amarilla.
 
