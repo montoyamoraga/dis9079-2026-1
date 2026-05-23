@@ -491,15 +491,16 @@ Porque transforma componentes simples y baratos en un robot humanoide expresivo.
 El movimiento generado por los SG90 hace que el robot parezca “vivo” y cercano emocionalmente, especialmente en contextos infantiles y sociales.
 
 
+
 ### Imágenes del proyecto:
 
 <img width="498" height="531" alt="Joy Robot01" src="https://github.com/user-attachments/assets/03da11ac-2a48-43f7-83fd-46fa81cacf11" />
 
 
-<img width="555" height="549" alt="Joy Robot02" src="https://github.com/user-attachments/assets/5aa09049-7a3b-4d7f-8cc2-06862e18f855" />
-
-
 <img width="400" height="273" alt="Joy Robot03" src="https://github.com/user-attachments/assets/51e3a26d-b9e5-45e5-8941-9bb1175386dd" />
+
+
+<img width="555" height="549" alt="Joy Robot02" src="https://github.com/user-attachments/assets/5aa09049-7a3b-4d7f-8cc2-06862e18f855" />
 
 
 
