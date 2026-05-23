@@ -13,7 +13,7 @@ Como encargo para la segunda solemne del curso, se nos pidió nuevamente desarro
 
 El proyecto consiste en un sistema de detección de movimiento que envía información de forma remota. Para esto, se utilizó un sensor PIR que se activa mediante un botón. Una vez encendido, el sensor detecta movimiento y transmite esta información a través de la Raspberry Pi Pico 2 W hacia la plataforma Adafruit IO. 
 
-Luego, estos datos son recibidos por el Arduino Uno R4 WiFi, el cual interpreta la señal y genera una respuesta visual en una pantalla OLED, que también se activa mediante un botón. En esta pantalla se muestran animaciones en pixel art, compuestas por tres frames por personaje, que, al reproducirse de manera secuencial, simulan movimiento, funcionando de forma similar a un GIF. Las animaciones muestran a una persona y un alien caminando, mientras que el fantasma se desplaza flotando. 
+Luego, estos datos son recibidos por el Arduino Uno R4 WiFi, que interpreta la señal y genera una respuesta visual en una pantalla OLED, la cual también se activa mediante un botón. En esta pantalla se muestran animaciones en pixel art de un alien, compuestas por seis frames que, al reproducirse de forma secuencial, simulan movimiento (tipo GIF). La animación representa una especie de contacto alienígena, donde el personaje se desplaza caminando.
 
 La lógica del sistema permite que, al detectar movimiento en el sensor, se active toda la cadena de comunicación hasta transformar ese evento en una representación visual. De esta forma, se traduce una acción física en una respuesta digital interactiva.
 
