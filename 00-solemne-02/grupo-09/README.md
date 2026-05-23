@@ -34,6 +34,9 @@ print("mqtt OK")
 import adafruit_io.adafruit_io
 print("adafruit_io OK")
 
+<img src="./imagenes/terminalputty.jpeg " alt="install" width="500">
+
+
 Ahí se soluciona el problema y comenzó a correr exitosamente.
 
 En la clase siguiente, le comentamos a Aarón lo que habíamos hecho y  nos dijo que cambiaríamos la temática de nuestro proyecto, puesto que queríamos hacer una guillotina que le cortara la cabeza a Kast y nos comentó que él no merecía nuestra atención.
@@ -59,6 +62,8 @@ Finalmente dió resultado y Putty reconoció el botón, pero nos daba el siguien
 Error:
  “(‘Unable to receive 1 bytes within 10 seconds. ‘, None) - reconectando …”
 
+<img src="./imagenes/error.jpeg " alt="install" width="500">
+
 Así que le preguntamos a Claude que significaba ese error y nos dijo que el error se encontraba en  mqtt.loop() porque el broker corta la conexión por inactividad, también teníamos otro problema que era:
 
 MMQTTException: (‘Connection Refused - Unauthorized’, 5)
@@ -81,7 +86,12 @@ Potenciometro 20K Ohm
 
 -Resistencia que puede variar su valor de forma manual, está compuesta de tres puntos de conexión de las cuales dos son fijos y están conectados a un elemento resistivo, y el otro está conectado a una pieza que se mueve lado a lado. Puntualmente la que utilizamos nosotros va desde 0 Ohm a 20K Ohm
 
+<img src="./imagenes/potenciometro.png " alt="install" width="500">
+
 Botón pulsador
+Los botones push son componentes que sirven para controlar el flujo de corriente al ser accionado. 
+
+
 
 - 
 
@@ -89,6 +99,8 @@ Botón pulsador
 Micro Servo Motor SG90 9g 
 
 Es un actuador controlable que recibe señales especificando los angulos en los que tiene que girar, puntualmente el nuestro va de 0° a 180°.
+
+
 
 ## Código usado para enviar
 
