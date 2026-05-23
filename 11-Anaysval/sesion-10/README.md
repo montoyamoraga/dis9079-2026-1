@@ -121,3 +121,7 @@ while True:
     time.sleep(0.02)
 ```
 
+### Recordatorios de Aaron
+
+![foto](./imagenes/aaron.jpg)
+
