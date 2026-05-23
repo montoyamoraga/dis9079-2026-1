@@ -398,14 +398,24 @@ void MQTT_connect() {
 
 ## Imágenes del proyecto
 
+### PRIMERAS CONEXIONES 
+
 **ENVIAR**
-![titulo](./imagenes/enviar.jpeg)
+![enviar](./imagenes/enviar.jpeg)
 
 **RECIBIR**
-![titulo](./imagenes/recibir.jpeg)
+![recibir](./imagenes/recibir.jpeg)
 
 **CONJUNTO**
-![titulo](./imagenes/conjunto.jpeg)
+![conjunto](./imagenes/conjunto.jpeg)
+
+###CONEXIONES FINALES
+
+![enviar2](./imagenes/conexion-enviar.jpeg)
+
+![recibir2](./imagenes/conexion-recibir.jpeg)
+
+![recibir3](./imagenes/conexion-recibir2.jpeg)
 
 ## Animaciones del proyecto
 
