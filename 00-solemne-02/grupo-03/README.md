@@ -2,9 +2,9 @@
 
 ## Integrantes
 
-- Magdalena Balart / (https://github.com/magdalenabalart)
-- Jesús Miranda / (https://github.com/jesumirandaa)
-- Carla Núñez / (https://github.com/ccarlabelenn)
+- Magdalena Balart / https://github.com/magdalenabalart
+- Jesús Miranda / https://github.com/jesumirandaa
+- Carla Núñez / https://github.com/ccarlabelenn
 
 ## Descripción textual del proyecto
 
