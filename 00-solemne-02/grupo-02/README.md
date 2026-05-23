@@ -69,7 +69,9 @@ Estos errores aparecían debido a que CircuitPython requiere librerías específ
 
 Luego de investigar el funcionamiento de CircuitPython y agregar las bibliotecas necesarias, logramos avanzar parcialmente en el proyecto.
 
-## Descripción textual del proyecto
+## Descripción del proyecto grupal final
+
+El proyecto consiste en un sistema de comunicación inalámbrica basado en la lógica de enviar y recibir en la plataforma de Adafruit IO. Para enviar datos utiliza una Raspberry Pi Pico 2w y para recibir datos utiliza un Arduino UNO R4 Wifi. El modo de enviar datos es a través de sensor el cuál es un botón pulsador de 4 pines. Cuando el botón es oprimido y sus datos son recibidos, un LED actuador se encenderá y apagará según si el botón esté presionado o suelto.
 
 ## Sensor usado
 ### Botón pulsador de 4 pines
