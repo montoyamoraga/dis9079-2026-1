@@ -834,6 +834,8 @@ void loop() {
 ```
 ## Imágenes del proyecto
 ![movimiento](imagenes/movimiento.jpeg)
+![proyecto](imagenes/materiales.jpeg)
+
 
 
 ## Animaciones del proyecto
