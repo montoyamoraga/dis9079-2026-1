@@ -51,4 +51,21 @@ Su función es detectar movimiento a partir de las variaciones presentes en el e
 #### Sobre el proyecto
 Se trabajó con un sensor PIR conectado junto a un push button. El sistema funcionaba activando el sensor al apretar el botón. Una vez encendido, el sensor PIR detecta movimiento al acercarse a este y este mismo movimiento se registra en la cuenta de Adafruit donde se registró todo el proceso y los movimientos. Para detener la detección y el envío de datos se volvía a presionar el botón para desactivar el sensor.
 
-![proyecto](imagenes/materiales.jpg)
+![proyecto](imagenes/materiales.jpeg)
+
+
+### Referente artístico: SURFACE X — Picaroon
+Está compuesta por 35 paraguas suspendidos que reaccionan cuando una persona se acerca. El proyecto utiliza:
+* 20 sensores PIR.
+* 2 Arduino Mega.
+* Sistemas neumáticos.
+* Iluminación y movimiento mecánico.
+
+El sistema funciona detectando la presencia y movimiento de las personas  mediante sensores PIR. Cuando una persona entra al espacio de detección, los sensores envían información al Arduino principal, que controla el comportamiento de los paraguas. Como respuesta, los paraguas se mueven, vibran o “reaccionan” frente a la cercanía humana, generando una experiencia interactiva e inmersiva.
+
+La interacción ocurre en tiempo real ya que el espectador modifica el comportamiento de la instalación simplemente desplazándose dentro del espacio. El uso del sensor PIR permite detectar presencia sin necesidad de contacto físico, transformando el movimiento corporal en datos digitales capaces de activar respuestas visuales.
+
+![proyecto](imagenes/referentesurface.png)
+![proyecto](imagenes/referentesurface1.png)
+
+
