@@ -47,6 +47,15 @@ Se utilizó como actuador una pantalla OLED junto con un push button. El funcion
 
 La pantalla OLED funciona mediante comunicación digital (generalmente protocolo I2C), lo que permite transmitir datos desde el microcontrolador hacia la pantalla usando pocos pines. Este tipo de pantalla se caracteriza por su bajo consumo energético, buen contraste y capacidad de mostrar texto o gráficos de forma clara. Por otro lado, el push button es un interruptor momentáneo que cierra el circuito solo mientras se presiona, enviando una señal digital al sistema.
 
+Aprendizajes del uso de animaciones:
+
+Las principales dificultades que tuvimos al realizar la animación fueron que, al principio, los frames no corrían correctamente en la pantalla. Después de investigar y ver varios videos, logramos que la pantalla mostrara un frame estático, aunque todavía sin movimiento.
+El siguiente desafío fue agregar los demás frames, ya que teníamos que convertir cada imagen individualmente usando Image2CPP, y en varias ocasiones el código nos arrojaba errores.
+Finalmente, conseguimos que el GIF funcionara correctamente y se reprodujera completo en la pantalla. Sin embargo, no logramos implementar el cambio entre distintos GIFs.
+
+foto de los settings de image2cpp
+
+
 ## Código usado para enviar
 
 ## Código usado para recibir
@@ -640,22 +649,25 @@ void loop() {
 
 ## Animaciones del proyecto
 ### Frames
-
-![frame1](imagenes/frame1.jpeg)
-
-
-![frame2](imagenes/frame2.jpeg)
-
-
-![frame3](imagenes/frame3.jpeg)
-
-
-![frame4](imagenes/frame4.jpeg)
-
-
+![frames](imagenes/frames.png)
 
 ### Loop:
 ![alien_loop](imagenes/alien_loop.gif)
 
-
 ## Bibliografía
+- <https://www.youtube.com/watch?v=HxjvP9m-hRo>
+- <https://www.330ohms.com/blog/explora-3/que-es-un-sensor-pir-y-como-funciona-8>
+- Javl. Image2cpp.
+ https://javl.github.io/image2cpp/
+- Adafruit Industries. Monochrome OLED Breakouts: Arduino Library and Examples.
+ https://learn.adafruit.com/monochrome-oled-breakouts/arduino-library-and-examples
+- Huy Khoong. gif2cpp.
+ https://github.com/huykhoong/gif2cpp
+- Random Nerd Tutorials. ESP32/Arduino OLED Display Guide.
+https://randomnerdtutorials.com/guide-for-oled-display-with-arduino/ 
+- SparkFun Electronics. PIR Motion Sensor Hookup Guide.
+https://learn.sparkfun.com/tutorials/pir-motion-sensor-hookup-guide/all
+- Adafruit. (s.f.). Adafruit IO documentation. Adafruit Learning System. 
+https://io.adafruit.com/
+- Soldered Electronics. (s.f.). SSD1306 OLED display overview. Soldered Documentation. 
+https://docs.soldered.com/ssd1306/overview/
