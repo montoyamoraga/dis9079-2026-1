@@ -74,6 +74,9 @@ Resulta que el problema era que el nombre de adafruit “Kaiikou” estaba escri
 
 <img src="./imagenes/prueba.gif " alt="install" width="500">
 
+<img src="./imagenes/feedservo.jpeg " alt="install" width="500">
+
+
 
 
 
@@ -97,6 +100,7 @@ Potenciometro 20K Ohm
 Botón pulsador
 Los botones push son componentes que sirven para controlar el flujo de corriente al ser accionado. 
 
+<img src="./imagenes/botonpush.jpg " alt="install" width="500">
 
 
 - 
@@ -385,6 +389,13 @@ void loop() {
 
 
 ## Imágenes del proyecto
+
+<img src="./imagenes/Efeedservo2.jpeg " alt="install" width="500">
+
+<img src="./imagenes/monitorserial.jpeg " alt="install" width="500">
+
+
+
 
 ## Animaciones del proyecto
 
