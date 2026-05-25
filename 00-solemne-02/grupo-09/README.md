@@ -52,32 +52,26 @@ Línea modificada:
 
 `if abs(angle - last_angle) = 2 and (now - last_send_time) = 5`
 
-Aarón nos sugirió que hiciéramos algo más tangible para controlar la sobrecarga de datos y que 
-habláramos con el grupo 05, quienes estaban usando un botón push para controlar el envío de 
-datos. Nicolás nos explicó cómo lo querían hacer funcionar, creando un RPullDown, asegurando 
-que la entrada lea un estado bajo constante hasta que, al presionar el botón, la lleve a un 
-voltaje alto; esto para no tener que usar una resistencia en las conexiones físicas. También nos 
-explicó cómo hacer la conexión del botón a la Raspi.
+Aarón nos sugirió que hiciéramos algo más tangible para controlar la sobrecarga de datos y que habláramos con el grupo 05, quienes estaban usando un botón push 
+para controlar el envío de datos. Nicolás nos explicó cómo lo querían hacer funcionar, creando un RPullDown, asegurando que la entrada lea un estado bajo 
+constante hasta que, al presionar el botón, la lleve a un voltaje alto; esto para no tener que usar una resistencia en las conexiones físicas. También nos explicó 
+cómo hacer la conexión del botón a la Raspi.
 
-Por recomendación de Aarón buscamos documentos que tuvieran un código parecido al que 
-necesitábamos. Encontramos:
+Por recomendación de Aarón buscamos documentos que tuvieran un código parecido al que necesitábamos. 
+
+Encontramos:
 <https://docs.sunfounder.com/projects/pico-2w-kit/en/latest/cproject/ar_button.html>
 
 En un inicio tratamos de hacer la conexión con un resistor de 220 ohms, a recomendación de Aarón:
 <img src="./imagenes/intentoresistor.jpeg" alt="install" width="500">
 
-Luego vimos la posibilidad de hacerlo con un RPullUp o un RPullDown, como aparecía en el 
-documento y como lo hicieron en el grupo 05; decidimos esto último para que la protoboard no 
-estuviera tan saturada de conexiones.
+Luego vimos la posibilidad de hacerlo con un RPullUp o un RPullDown, como aparecía en el documento y como lo hicieron en el grupo 05; decidimos esto último para que la protoboard no estuviera tan saturada de conexiones.
+
 <img src="./imagenes/intentoboton.jpeg" alt="install" width="500">
 
-Luego de implementar en nuestro código los fragmentos del sitio, lo corrimos y ahora solo se 
-enviaban datos cuando movíamos el potenciómetro (antes se enviaban siempre cada 0,2 segundos).
+Luego de implementar en nuestro código los fragmentos del sitio, lo corrimos y ahora solo se enviaban datos cuando movíamos el potenciómetro (antes se enviaban siempre cada 0,2 segundos).
 
-Seguimos trabajando en el envío de datos y comenzamos a probar con distintos fragmentos del 
-primer código que nos funcionó. Le pedimos a nuestros compañeros del grupo 05 si nos podían 
-ayudar, así que nos mostraron cómo era la parte de su código que hacía funcionar el botón. 
-Entonces comenzamos a modificarlo y fuimos sumando las partes que nos servían a nuestro código.
+Seguimos trabajando en el envío de datos y comenzamos a probar con distintos fragmentos del primer código que nos funcionó. Le pedimos a nuestros compañeros del grupo 05 si nos podían ayudar, así que nos mostraron cómo era la parte de su código que hacía funcionar el botón. Entonces comenzamos a modificarlo y fuimos sumando las partes que nos servían a nuestro código.
 
 Finalmente dio resultado y PuTTY reconoció el botón, pero nos daba el siguiente error:
 
@@ -85,19 +79,16 @@ Finalmente dio resultado y PuTTY reconoció el botón, pero nos daba el siguient
 
 <img src="./imagenes/error.jpeg" alt="install" width="500">
 
-Así que le preguntamos a Claude qué significaba ese error y nos dijo que el problema se 
-encontraba en `mqtt.loop()`, porque el broker corta la conexión por inactividad. También 
-teníamos otro problema:
+Así que le preguntamos a Claude qué significaba ese error y nos dijo que el problema se encontraba en `mqtt.loop()`, porque el broker corta la conexión por inactividad. También teníamos otro problema:
 
 > *MMQTTException: ('Connection Refused - Unauthorized', 5)*
 
 <img src="./imagenes/errorindentacion.jpeg" alt="install" width="500">
 
-Resultó que el problema era que el nombre de usuario de Adafruit, "Kaiikou", estaba escrito en 
-minúscula. Lo corregimos y ahí funcionó: el botón detenía el envío de información cuando era 
-presionado.
+Resultó que el problema era que el nombre de usuario de Adafruit, "Kaiikou", estaba escrito en minúscula. Lo corregimos y ahí funcionó: el botón detenía el envío de información cuando era presionado.
 
 <img src="./imagenes/prueba.gif" alt="install" width="500">
+
 <img src="./imagenes/feedservo.jpeg" alt="install" width="500">
 
 Luego de poder integrar el botón y que funcionara en el código, decidimos darle una intención al movimiento del motor servo. Primero intentamos con un movimiento
@@ -117,23 +108,19 @@ ralentizamos el movimiento subiendo los milisegundos a 1000, y este resultado no
 ## Sensor usado
 
 **Potenciómetro 20K Ohm**
-Resistencia que puede variar su valor de forma manual. Está compuesta de tres puntos de 
-conexión, de los cuales dos son fijos y están conectados a un elemento resistivo, y el otro 
-está conectado a una pieza que se desliza de lado a lado. Puntualmente, el que utilizamos 
-va desde 0 ohm hasta 20K ohm.
+Resistencia que puede variar su valor de forma manual. Está compuesta de tres puntos de conexión, de los cuales dos son fijos y están conectados a un elemento
+resistivo, y el otro está conectado a una pieza que se desliza de lado a lado. Puntualmente, el que utilizamos va desde 0 ohm hasta 20K ohm.
 
 <img src="./imagenes/potenciometro.png" alt="install" width="500">
 
 **Botón pulsador**
-Los botones push son componentes que sirven para controlar el flujo de corriente al ser 
-accionados.
+Los botones push son componentes que sirven para controlar el flujo de corriente al ser accionados.
 <img src="./imagenes/botonpush.jpg" alt="install" width="500">
 
 ## Actuador usado
 
 **Micro Servo Motor SG90 9g**
-Es un actuador controlable que recibe señales especificando los ángulos en los que tiene que 
-girar. Puntualmente, el nuestro va de 0° a 180°.
+Es un actuador controlable que recibe señales especificando los ángulos en los que tiene que girar. Puntualmente, el nuestro va de 0° a 180°.
 
 ## Código usado para enviar
 
