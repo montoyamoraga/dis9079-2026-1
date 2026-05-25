@@ -11,8 +11,8 @@ print("Iniciando programa...")
 # -------------------------
 # WiFi
 # -------------------------
-SSID = "cata"
-PASSWORD = "cata21312131"
+SSID = "blabla"
+PASSWORD = "blabla"
 
 print("Conectando WiFi...")
 
@@ -24,15 +24,13 @@ try:
 except Exception as e:
     print("Error WiFi:")
     print(e)
-
     while True:
         pass
-
 
 # -------------------------
 # Adafruit IO
 # -------------------------
-AIO_USERNAME = "AlegriaColoma"
+AIO_USERNAME = "blabla"
 AIO_KEY = "blabla"
 
 FEED_BOTON = AIO_USERNAME + "/feeds/prueba"
@@ -57,10 +55,8 @@ try:
 except Exception as e:
     print("Error MQTT:")
     print(e)
-
     while True:
         pass
-
 
 # -------------------------
 # Botón GP0
@@ -83,19 +79,21 @@ while True:
 
         estado_actual = boton.value
 
-        # Detecta transición:
-        # sin presionar -> presionado
+        # True = no presionado, False = presionado (lógica invertida por Pull.UP)
+
+        # Botón presionado: True -> False → ENCENDER LED
         if estado_anterior and not estado_actual:
+            print("Botón presionado → Encendiendo LED")
+            mqtt.publish(FEED_BOTON, "ON")
+            print("Enviado: ON")
+            time.sleep(0.25)  # anti-rebote
 
-            print("Botón presionado")
-            print("Enviando impulso...")
-
-            mqtt.publish(FEED_BOTON, "1")
-
-            print("Impulso enviado")
-
-            # anti-rebote
-            time.sleep(0.25)
+        # Botón suelto: False -> True → APAGAR LED
+        elif not estado_anterior and estado_actual:
+            print("Botón suelto → Apagando LED")
+            mqtt.publish(FEED_BOTON, "OFF")
+            print("Enviado: OFF") # type: ignore
+            time.sleep(0.25)  # anti-rebote
 
         estado_anterior = estado_actual
 
