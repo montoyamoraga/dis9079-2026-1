@@ -1,6 +1,6 @@
 # solemne-02
 
-## Integrantes
+### Integrantes
 
 - Braulio Figueroa / github: [brauliofigueroa2001](https://github.com/brauliofigueroa2001)
 - Luisa Toro / github: [Luisaatoro9](https://github.com/Luisaatoro9)
@@ -10,7 +10,7 @@
 ---
 
 
-## 1. Introducción y Organización
+### 1. Introducción y Organización
 
 Esta sesión fue el punto de encuentro de todo lo aprendido en el semestre. El objetivo: lograr que una Raspberry Pi Pico 2 W (emisor) controle un LED en un Arduino UNO R4 WiFi (receptor) a través de la nube.
 
@@ -22,11 +22,11 @@ Nos organizamos inicialmente en duplas para asegurar que cada parte funcionara d
 
 ---
 
-## Avance en clases dúo Braulio Figueroa y Luisa Toro
+### Avance en clases dúo Braulio Figueroa y Luisa Toro
 
 ---
 
-## Sensor usado - Botón pulsador de 4 pines
+### Sensor usado - Botón pulsador de 4 pines
 
 El objetivo es tener un código de enviar desde un Raspberry Pi Pico 2W y un código de recibir en un Arduino Uno R4 Wifi, utilizaremos un botón como primer acercamiento para poder crear una especie de "puerta" que nos dé la opción de activar y desactivar el envío de lecturas de datos hacia Adafruit IO, de esta manera, el servidor de IO no colapsa y evitamos problemas.
 
@@ -49,7 +49,7 @@ Se usó un botón físico para decidir cuándo mandar información a Adafruit IO
 
 **Imagen 02** *En esta imagen se evidencia la conexión del botón con el Raspberry Pi Pico 2w*
 
- ## Código usado para enviar, experimentación en clases - Raspberry Pi Pico 2w
+ ### Código usado para enviar, experimentación en clases - Raspberry Pi Pico 2w
 
 ```cpp
 import time
@@ -296,6 +296,52 @@ Posteriormente, trabajamos en la programación del sensor y del botón, pero sur
 
 Finalmente, debido a la falta de tiempo para continuar avanzando con nuestro proyecto inicial, tuvimos que incorporarnos al Grupo 10, integrado por Braulio Figueroay Luisa Toro, con el fin de continuar el trabajo práctico de la clase.
 
+## Materiales usados en clases 
+| Material | Cantidad | Precio aproximado (CLP) |
+|---|---:|---:|
+| Raspberry Pi Pico 2W | 1 | $15.990 |
+| Arduino UNO R4 WiFi | 1 | $34.990 |
+| HC-SR04 Ultrasonic Sensor | 1 | $3.290 |
+| SG90 Micro Servo Motor | 1 | $1.830 |
+| Protoboard | 1 | $2.590 |
+| Cables Dupont | 1 pack | $1.990 |
+| Cable USB | 1 | $3.000 |
+| Fuente de alimentación USB | 1 | $8.000 |
+
+# Problemas encontrados en el proyecto inicial
+
+Durante el desarrollo inicial de nuestro proyecto, uno de los principales problemas se presentó en la Raspberry Pi Pico 2W, ya que el código utilizado para controlar el sensor ultrasónico HC-SR04 arrojaba múltiples errores relacionados con bibliotecas faltantes.
+
+Visual Studio Code mostraba mensajes de error indicando que módulos como:
+
+```python
+import wifi
+import socketpool
+import board
+import adafruit_hcsr04
+import adafruit_minimqtt.adafruit_minimqtt as MQTT
+import digitalio
+```
+![Errores de bibliotecas en VS Code](imagenes/error_bibliotecas.png)
+
+Estos errores aparecían debido a que CircuitPython requiere librerías específicas instaladas manualmente dentro de la carpeta `lib` de la unidad `CIRCUITPY`.
+
+## Bibliotecas faltantes
+
+| Biblioteca |
+|---|
+| adafruit_minimqtt |
+| adafruit_requests.mpy |
+| adafruit_connection_manager.mpy |
+| adafruit_bus_device |
+| adafruit_ticks.mpy |
+| adafruit_hcsr04.mpy |
+
+## Librerías instaladas
+
+![Librerías instaladas](imagenes/librerias_instaladas.png)
+
+Luego de investigar el funcionamiento de CircuitPython y agregar las bibliotecas necesarias, logramos avanzar parcialmente en el proyecto.
 ## Descripción del proyecto grupal final
 
 El proyecto consiste en un sistema de comunicación inalámbrica basado en la lógica de enviar y recibir en la plataforma de Adafruit IO. Para enviar datos utiliza una Raspberry Pi Pico 2w y para recibir datos utiliza un Arduino UNO R4 Wifi. El modo de enviar datos es a través de sensor el cuál es un botón pulsador de 4 pines. Cuando el botón es oprimido y sus datos son recibidos, un LED actuador se encenderá y apagará según si el botón esté presionado o suelto.
@@ -645,6 +691,12 @@ En el caso del Arduino, nos enfocamos en la gestión de dependencias y el flujo 
 - *Monitor Serial y Debugging:* Les enseñamos a fijarse en el Baud Rate (fijado en 115200) y a interpretar los mensajes de error en el Monitor Serial para saber si el problema es de conexión al router o de autenticación con Adafruit IO.
   
 - *Manejo de Tópicos:* Detallamos cómo el nombre del "Feed" en el código debe ser exactamente igual al configurado en la plataforma para que la suscripción de datos funcione.
+
+<img width="330" height="260" alt="image" src="https://github.com/user-attachments/assets/96d11e60-5f93-4fa7-bf4f-931d1bc82c55" />
+<img width="330" height="260" alt="image" src="https://github.com/user-attachments/assets/162ae878-e5c6-4391-afe9-899cb3bba1ee" />
+<img width="330" height="260" alt="image" src="https://github.com/user-attachments/assets/9705532f-223a-4205-b864-7d31bcac80bc" />
+
+**Imagen 20, 21 y 22** *En las imágenes se puede demostrar el orden de las carpetas y la correcta configuración del entorno de desarrollo. Se observa cómo la gestión de dependencias y el flujo del programa son clave para que el Arduino UNO R4 WiFi se comunique sin errores con la plataforma Adafruit IO.*
 
 ---
 

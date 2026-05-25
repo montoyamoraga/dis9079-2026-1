@@ -72,7 +72,7 @@ Finalmente, conseguimos que el GIF funcionara correctamente y se reprodujera com
 
 ## Código usado para enviar
 
-```cpp
+```python
 import time
 import board
 import digitalio
@@ -834,6 +834,8 @@ void loop() {
 ```
 ## Imágenes del proyecto
 ![movimiento](imagenes/movimiento.jpeg)
+![proyecto](imagenes/materiales.jpeg)
+
 
 
 ## Animaciones del proyecto

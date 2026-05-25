@@ -98,7 +98,75 @@ Una dificultad en este momento fue realizar que las animaciones se lograran inte
 ![pruebas](imagenes/pruebas2.jpeg)
 
 
-### Referente artístico: 
+### Referente artístico: Circoled - Moritz König
+Se trata de una pantalla de mensajes desplazables con 8 pequeñas pantallas OLED, dispuestas alrededor de una placa de circuito impreso y controladas por un ESP32.
+
+Lo interesante del proyecto es que transforma varias pantallas pequeñas en una sola superficie continua de visualización de 360°. En vez de usar una pantalla rectangular tradicional, la información rodea completamente el objeto
+#### El dispositivo utiliza:
+* 8 pantallas OLED pequeñas.
+* ESP32 Pico D4.
+* PCB circular personalizada.
+* Carcasa impresa en 3D.
+#### La interfaz permite:
+* Escribir mensajes.
+* Controlar velocidad de desplazamiento.
+* Visualizar temperatura.
+* Mostrar batería.
+
+Circoled no utiliza las pantallas OLED únicamente como monitores, sino como parte central de una pieza interactiva. Las ocho pantallas organizadas en forma circular crean un cilindro luminoso que transforma la visualización de datos en una experiencia espacial. De esta manera, la pantalla deja de ser solo un soporte técnico y se convierte en un objeto visual performático y narrativo.
+
+![referente](imagenes/referentecicoled.png)
+
+## Bibliografía
+* Arduino. Official Website.
+https://www.arduino.cc/
+
+* PicoBricks. What is LDR Sensors?
+ https://picobricks.com/blogs/info/what-is-ldr-sensors
+
+* Winsen Sensor. Photoconductivity Sensors.
+ https://es.winsen-sensor.com/knowledge/photoconductivity-sensors.html
+
+* Adafruit Industries. Photocells.
+ https://learn.adafruit.com/photocells
+
+* Marco Brianza. WeMakeColors II.
+ https://www.marcobrianza.it/wemakecolors-ii/
+
+* Arduino.cl. Sensor PIR HC-SR501 Detector de Movimiento.
+ https://arduino.cl/producto/sensor-pir-hc-sr501-detector-de-movimiento/
+
+* Mechatronic Store. Sensor Detector de Movimiento PIR HC-SR501.
+ https://www.mechatronicstore.cl/sensor-detector-de-movimiento-pir-hc-sr501/
+
+* Hackster.io. Surface X Project.
+ https://www.hackster.io/Picaroon/surface-x-811e8c
+
+* Javl. Image2cpp. https://javl.github.io/image2cpp/
+
+* Adafruit Industries. Monochrome OLED Breakouts: Arduino Library and Examples. 
+https://learn.adafruit.com/monochrome-oled-breakouts/arduino-library-and-examples
+
+* Huy Khoong. gif2cpp. https://github.com/huykhoong/gif2cpp
+
+* Random Nerd Tutorials. ESP32/Arduino OLED Display Guide. 
+https://randomnerdtutorials.com/guide-for-oled-display-with-arduino/
+
+* SparkFun Electronics. PIR Motion Sensor Hookup Guide. 
+https://learn.sparkfun.com/tutorials/pir-motion-sensor-hookup-guide/all
+
+* Adafruit. (s.f.). Adafruit IO documentation. Adafruit Learning System. 
+https://io.adafruit.com/
+
+* Soldered Electronics. (s.f.). SSD1306 OLED display overview. Soldered Documentation.
+https://docs.soldered.com/ssd1306/overview/
+
+* Hackster.io. An ESP32 Controls This Cylindrical OLED Display.
+ https://www.hackster.io/news/an-esp32-controls-this-cylindrical-oled-display-70f9b999141b
+
+* PCBWay. Circoled – Eight Tiny OLED Displays Arranged in a Circle.
+ https://www.pcbway.com/project/shareproject/Circoled___Eight_tiny_OLED_displays_arranged_in_a_circle.html
+
 
 
 
