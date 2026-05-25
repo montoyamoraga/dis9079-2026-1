@@ -294,7 +294,7 @@ Durante el desarrollo del proyecto comenzamos realizando el cableado de la Raspb
 
 Posteriormente, trabajamos en la programación del sensor y del botón, pero surgieron diversas dificultades relacionadas con librerías necesarias para el funcionamiento del sistema y múltiples errores en el código. Intentamos resolver estos problemas durante otra hora adicional, investigando posibles soluciones y realizando distintas pruebas, pero no logramos que el sistema funcionara correctamente dentro del tiempo disponible.
 
-Finalmente, debido a la falta de tiempo para continuar avanzando con nuestro proyecto inicial, tuvimos que incorporarnos al Grupo 10, integrado por Braulio Figueroay Luisa Toro, con el fin de continuar el trabajo práctico de la clase.
+Finalmente, debido a la falta de tiempo para continuar avanzando con nuestro proyecto inicial, tuvimos que incorporarnos al Grupo 10, integrado por Braulio Figueroa y Luisa Toro, con el fin de continuar el trabajo práctico de la clase.
 
 ## Materiales usados en clases 
 | Material | Cantidad | Precio aproximado (CLP) |
@@ -324,7 +324,7 @@ import digitalio
 ```
 ![Errores de bibliotecas en VS Code](imagenes/error_bibliotecas.png)
 
-Estos errores aparecían debido a que CircuitPython requiere librerías específicas instaladas manualmente dentro de la carpeta `lib` de la unidad `CIRCUITPY`.
+Estos errores aparecían debido a que CircuitPython requiere bibliotecas específicas instaladas manualmente dentro de la carpeta `lib` de la unidad `CIRCUITPY`.
 
 ## Bibliotecas faltantes
 
@@ -337,9 +337,9 @@ Estos errores aparecían debido a que CircuitPython requiere librerías específ
 | adafruit_ticks.mpy |
 | adafruit_hcsr04.mpy |
 
-## Librerías instaladas
+## Bibliotecas instaladas
 
-![Librerías instaladas](imagenes/librerias_instaladas.png)
+![Bibliotecas instaladas](imagenes/bibliotecas_instaladas.png)
 
 Luego de investigar el funcionamiento de CircuitPython y agregar las bibliotecas necesarias, logramos avanzar parcialmente en el proyecto.
 ## Descripción del proyecto grupal final
