@@ -99,9 +99,6 @@ La visualización del sistema es inmediata: si el LED enciende, significa que la
 ### Polaridad invertida
 El LED posee un ánodo (positivo) y un cátodo (negativo). Si se conecta al revés, no enciende aunque tampoco se daña.
 
-### Baud rate incorrecto
-Si el monitor serial y el código utilizan velocidades diferentes de comunicación, el Arduino no interpreta correctamente los mensajes recibidos.
-
 ### Resistencia inadecuada
 Utilizar una resistencia demasiado baja puede provocar sobrecorriente, dañando el LED o incluso los pines de la placa.
 
@@ -117,6 +114,30 @@ Lo interesante de este referente es que utiliza exactamente el mismo principio t
 una señal digital controla el comportamiento de un LED.
 
 La diferencia está únicamente en la escala, ya que mientras nuestro proyecto controla un solo LED mediante Adafruit IO, esta instalación coordinaba miles de LEDs en tiempo real utilizando software y redes de control.
+
+---
+
+# Conclusión
+
+A través del desarrollo de este proyecto logramos comprender de manera práctica cómo interactúan un sensor, un actuador y una plataforma IoT dentro de un mismo sistema electrónico. Aunque el pulsador y el LED parecen componentes simples, durante la investigación y las pruebas descubrimos que existen múltiples factores técnicos que afectan directamente su funcionamiento, como el estado flotante, el rebote mecánico, la polaridad y el manejo correcto de señales digitales.
+
+Uno de los aprendizajes más importantes fue entender que muchos errores no necesariamente provienen de la programación, sino también de las conexiones físicas y de la configuración del hardware. Durante las pruebas tuvimos problemas relacionados con el cableado, la configuración de la Raspberry Pi Pico 2W y la transmisión de señales, lo que nos obligó a realizar distintos diagnósticos antes de encontrar la causa real de los fallos.
+
+Además, aprendimos la importancia del filtrado de datos y de la optimización de la comunicación con Adafruit IO, evitando enviar información innecesaria que pudiera saturar el servidor. También pudimos comprobar cómo el protocolo MQTT permite establecer una comunicación eficiente entre dispositivos conectados a internet.
+
+Otro aspecto relevante fue comprobar que el sistema podía funcionar incluso a larga distancia utilizando distintas redes WiFi, demostrando el potencial de este tipo de tecnologías para aplicaciones reales de automatización y monitoreo remoto.
+
+Finalmente, este proyecto permitió fortalecer habilidades tanto técnicas como de trabajo en equipo, ya que fue necesario investigar, probar soluciones, corregir errores y adaptar el sistema constantemente hasta lograr un funcionamiento estable. Gracias a esta experiencia comprendimos de mejor manera el funcionamiento básico de los sistemas IoT y cómo pequeños componentes electrónicos pueden formar parte de soluciones tecnológicas mucho más complejas.
+
+---
+
+# Aprendizajes Generales
+
+- Comunicación mediante protocolo MQTT.
+- Envío y recepción de datos utilizando Adafruit IO.
+- Control digital de actuadores mediante Arduino.
+- Diagnóstico y resolución de errores de hardware y software.
+- Trabajo práctico con Raspberry Pi Pico 2W y Arduino UNO R4 WiFi.
 
 ---
 
