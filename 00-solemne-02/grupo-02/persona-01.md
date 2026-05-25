@@ -5,6 +5,8 @@ Github:marlensoto-lab
 # El Sensor: Pulsador (Botón)
 
 ![Botón Pulsador](imagenes/boton_pulsador.jpg)
+     
+   Empresa Imagen referencial de Amazon Dash Button. Recuperado de https://www.amazon.com/. Fuente: Amazon Official Website.
 
 ## 1. ¿Qué aprendí sobre este sensor?
 
@@ -51,6 +53,8 @@ Cuando no se utilizan resistencias Pull-up o Pull-down, el pin queda inestable y
 
 ![Empresa](imagenes/Amazon.png) 
 
+  *Imagen referencial de Amazon Dash Button*. Recuperado de https://www.amazon.com/. Fuente: Amazon Official Website
+
 Los Amazon Dash Buttons fueron botones inteligentes conectados por WiFi que permitían pedir productos automáticamente desde el hogar con una sola pulsación.
 
 Este referente se relaciona directamente con nuestro proyecto, ya que ambos utilizan la misma lógica:
@@ -65,6 +69,8 @@ Además, estos dispositivos también necesitaban controlar problemas similares a
 # El Actuador: LED
 
 ![LED](imagenes/Luz_led.jfif)
+
+  *Imagen referencial educativa de LED*. Fuente: SparkFun LEDs Tutorial
 
 ## 1. ¿Qué aprendí sobre este actuador?
 
@@ -103,6 +109,7 @@ Utilizar una resistencia demasiado baja puede provocar sobrecorriente, dañando 
 
 ## 4. Referente: The Bay Lights — Leo Villareal
 ![Referente](imagenes/Referente_2.jpg)
+Imagen referencial de la instalación artística “The Bay Lights”. Fuente: The Bay Lights Official Site
 
 “The Bay Lights” es una instalación artística creada por Leo Villareal que utilizó miles de LEDs distribuidos en el puente Bay Bridge de San Francisco para generar patrones lumínicos dinámicos mediante programación.
 
@@ -124,4 +131,12 @@ La diferencia está únicamente en la escala, ya que mientras nuestro proyecto c
 - Wikipedia. *Amazon Dash*. Disponible en: https://en.wikipedia.org/wiki/Amazon_Dash
 
 - Leo Villareal. *The Bay Lights*. Disponible en: https://www.leovillareal.com/project/the-bay-lights/
+  
+- Arduino Documentation. (s.f.). *Imagen de botón pulsador utilizada como referencia educativa*. Recuperado de https://docs.arduino.cc/built-in-examples/digital/Button/
+
+- Amazon. (s.f.). *Imagen referencial de Amazon Dash Button*. Recuperado de https://www.amazon.com/
+
+- SparkFun Electronics. (s.f.). *Imagen referencial de LED electrónico*. Recuperado de https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds/all
+
+- The Bay Lights. (s.f.). *Fotografía de la instalación artística The Bay Lights*. Recuperado de https://www.thebaylights.org/
 
