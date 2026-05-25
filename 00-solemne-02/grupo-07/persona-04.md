@@ -182,6 +182,14 @@ Durante el desarrollo del proyecto se aprendió que:
 - La comunicación inalámbrica requiere optimizar frecuencia de envío.
 - La visualización gráfica mejora mucho la experiencia del usuario.
 
+### Empresa que utiliza sensores PIR
+
+Una empresa reconocida que utiliza sensores PIR es Philips mediante su sistema de iluminación inteligente Philips Hue Motion Sensor.
+
+Este dispositivo detecta movimiento dentro de una habitación y activa automáticamente luces inteligentes. También permite automatizar rutinas de ahorro energético y seguridad doméstica.
+
+Otro ejemplo es Ring, que incorpora sensores PIR en cámaras y timbres inteligentes para detectar personas y activar grabaciones de seguridad.
+
 ---
 
 ## Actuador
@@ -310,6 +318,23 @@ Durante el proyecto se aprendió que:
 - El control de frecuencia de actualización es importante.
 - La integración entre IoT y visualización gráfica mejora la experiencia del usuario.
 - Un actuador puede transformar datos simples en respuestas visuales atractivas e intuitivas.
+
+### Proyectos que utilizan pantallas OLED 
+
+Consolas retro portátiles
+
+Existen múltiples proyectos de consolas mini retro que usan pantallas OLED SSD1306 de 128x64 píxeles para ejecutar juegos simples estilo arcade o pixel art.
+
+Estas pantallas son ideales porque:
+- tienen buena visibilidad,
+- consumen poca energía,
+- permiten gráficos monocromáticos rápidos.
+
+Ejemplos:
+- mini Game Boy DIY,
+- juegos tipo Snake,
+- Tetris,
+- Flappy Bird en Arduino.
 
 ## Bibliografía
 
