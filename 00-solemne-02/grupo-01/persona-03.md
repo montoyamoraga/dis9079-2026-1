@@ -8,11 +8,19 @@ Para la Pantalla OLED 128x84 px se debe implementar la app PuTTY que es la que h
 
 ## Sensor
 
-El sensor está conectado en la misma protoboard en la que está la pantalla OLED con la Raspberry Pi Pico 2 W, en este caso es el potenciómetro de 100k el cual se activa girando la perilla y posteriormente pulsando el botón que es el que corrobora los cambios realizados desde su última posición.
+El sistema de entrada está compuesto por un potenciómetro de 100k y un botón pulsador, ambos montados en la misma placa de pruebas (protoboard) junto a una Raspberry Pi Pico 2 W y una pantalla OLED.
 
-Este está conectado mediante un cable USB a tipo micro USB a una computadora portátil diferente a la que está conectado el actuador.
+- Funcionamiento: El potenciómetro actúa como el sensor analógico principal, al girar su perilla, genera una variación de voltaje que el microcontrolador interpreta como un ángulo deseado.
+
+El botón opera como un mecanismo de confirmación, el sistema solo registra y envía la posición actual del potenciómetro cuando este es presionado.
+
+- Conectividad y Comunicación: La Raspberry Pi Pico 2 W procesa estas señales y está conectada mediante un cable de USB a Micro-USB a una primera computadora portátil (estación de control).
+
+Esta computadora opera de manera independiente a la que controla el actuador.
 
 ![proceso](./imagenes/ej1.jpeg)
+
+![proceso](./imagenes/ej3.jpeg)
 
 ## Actuador
 
@@ -23,6 +31,8 @@ Entonces el servomotor utilizado en este caso es nuestro actuador, el cual se ir
 Este va conectado a los pines del Arduino en otra protoboard diferente a la del sensor, el Arduino está conectado mediante cable USB a tipo C directamente a la computadora portátil.
 
 ![proceso](./imagenes/ej2.jpeg)
+
+![proceso](./imagenes/ej4.jpeg)
 
 ## Bibliografía
 
