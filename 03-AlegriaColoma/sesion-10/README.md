@@ -16,7 +16,7 @@ Durante la clase activamos la Raspi y probamos que funcionara el potenciometro y
 
 -finalmente solo queda esperar a ver si funciona con el wifi mas estable :(
 
-### Pruebas de la solemne 2 
+## Pruebas de la solemne 2 
 
 
 Decidimos realizar las prueba en un feed personal ya que en los feeds de Aarón no nos funcionó.
@@ -26,6 +26,12 @@ Durante las pruebas se presentaron algunos inconvenientes. El código del Arduin
 Respecto al LED, se observó que el LED externo no encendía, pero sí lo hacía el LED de transmisión (TX) de la placa al momento de recibir cada mensaje, lo que confirmó que la comunicación entre ambos dispositivos estaba operando con éxito.
 
 Finalmente, el sistema fue probado con ambas placas separadas aproximadamente 6 metros entre sí, logrando una comunicación exitosa, lo que demostró que el envío de información funciona de forma inalámbrica sin necesidad de proximidad física entre los dispositivos.
+
+Sensor usado para la solemne --> Botón, pulsador normal, 4 patas y dos nodos.
+
+Actuador usado para la solemne --> un LED externo del la placa Arduino.
+
+
 
 <img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/3a16bfe9-00be-4084-80d9-cf79f6aa3bf3" />
 
