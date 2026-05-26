@@ -18,6 +18,9 @@ Durante la clase activamos la Raspi y probamos que funcionara el potenciometro y
 
 ### Pruebas de la solemne 2 
 
+
+Decidimos realizar las prueba en un feed personal ya que en los feeds de Aarón no nos funcionó.
+
 Durante las pruebas se presentaron algunos inconvenientes. El código del Arduino funcionaba correctamente en un computador, pero al intentar usarlo desde otro equipo, el programa cargaba pero no lograba recibir los mensajes del feed. Para resolver esto, se optó por mantener el Arduino conectado al computador donde el código había sido verificado, y la Raspberry Pi Pico W se operó desde el otro equipo. Con esta configuración el sistema comenzó a funcionar correctamente.
 
 Respecto al LED, se observó que el LED externo no encendía, pero sí lo hacía el LED de transmisión (TX) de la placa al momento de recibir cada mensaje, lo que confirmó que la comunicación entre ambos dispositivos estaba operando con éxito.
