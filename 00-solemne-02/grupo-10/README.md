@@ -324,7 +324,7 @@ import adafruit_hcsr04
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
 import digitalio
 ```
-![Errores de bibliotecas en VS Code](imagenes/error_bibliotecas.png)
+![Errores de bibliotecas en VS Code](imagenes/errorA.JPG)
 
 Estos errores aparecían debido a que CircuitPython requiere bibliotecas específicas instaladas manualmente dentro de la carpeta `lib` de la unidad `CIRCUITPY`.
 
@@ -341,7 +341,7 @@ Estos errores aparecían debido a que CircuitPython requiere bibliotecas especí
 
 ## Bibliotecas instaladas
 
-![Bibliotecas instaladas](imagenes/bibliotecas_instaladas.png)
+![Bibliotecas instaladas](imagenes/errorB.JPG)
 
 Luego de investigar el funcionamiento de CircuitPython y agregar las bibliotecas necesarias, logramos avanzar parcialmente en el proyecto.
 ## Descripción del proyecto grupal final

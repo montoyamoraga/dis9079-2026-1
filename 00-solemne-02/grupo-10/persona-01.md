@@ -15,7 +15,7 @@ Push Button 4 pines también conocido como MicroSwitch, botón o pulsador es un 
 
 ¿Para qué sirve? 
 
-Los botones son de propósito general y son utilizados en diversos dispositivos electrónicos. Ideales para realizar practicas de electrónica para armar circuitos en protoboard´s, así como integrar a placas de circuito impreso PCB.
+Los botones son de propósito general y son utilizados en diversos dispositivos electrónicos. Ideales para realizar practicas de electrónica para armar circuitos en protoboards, así como integrar a placas de circuito impreso PCB.
 
 Especificaciones del Pushbutton de 4 pines
 
@@ -53,7 +53,7 @@ El rebote también ocurre en el software, mientras que los programadores de prog
 
 **Speaker**
 
-Para mi investigación sobre un actuador, quise buscar información sobre algo distinto a lo que estábamos trabajando como grupo, ya que, desde hace un tiempo que quiero poder hacer algo con sonido y quizá el exámen podría ser la oportunidad de realizarlo
+Para mi investigación sobre un actuador, quise buscar información sobre algo distinto a lo que estábamos trabajando como grupo, ya que, desde hace un tiempo que quiero poder hacer algo con sonido y quizá el examen podría ser la oportunidad de realizarlo
 
 ![speaker](./imagenes/speaker.JPG)
 
