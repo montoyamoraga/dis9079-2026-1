@@ -56,6 +56,8 @@ El Minimoog Model D es un sintetizador analógico monofónico equipado con 3 osc
 
 <img width="876" height="584" alt="image" src="https://github.com/user-attachments/assets/ee66402f-75b0-4193-87d3-0bb943897e45" />
 
+*Moog’s Minimoog Model D*, 1970.
+
 ## Actuador
 
 ### Micro servo motor SG90
@@ -97,6 +99,7 @@ La lista de materiales es completamente accesible y económica: un Arduino Uno, 
 Pocos proyectos de Arduino usan servomotores de una manera tan interesante como esta pieza de arte electrónico, que incluso con solo 36 servos produce efectos visuales notables. El blog oficial de Arduino lo destacó como referencia en su categoría, validando su valor como obra que cruza la frontera entre la electrónica maker y el arte cinético interactivo. Además, Domke tiene otros proyectos similares, incluyendo un reloj de palabras controlado por 114 servomotores, lo que muestra una línea de trabajo artístico consistente centrada en el SG90 como herramienta expresiva.
 
 <img width="900" height="675" alt="image" src="https://github.com/user-attachments/assets/22691394-8db0-4514-af59-d9b8cab687e6" />
+
 *Servo Motor Artwork* Doug Domke, 2019.
 
 ## Bibliografía
