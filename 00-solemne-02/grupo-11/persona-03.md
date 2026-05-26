@@ -109,7 +109,7 @@ Para solucionar estos problemas se utilizan filtros de información, mantenimien
 
 ## Proyecto o empresa que utiliza sensores
 
-#Agricultura Inteligente (Smart Farming)
+# Agricultura Inteligente (Smart Farming)
 
 Uno de los proyectos más utilizados actualmente y que realmente funciona en la vida cotidiana es la agricultura inteligente o Smart Farming. Este sistema utiliza sensores conectados inalámbricamente para monitorear cultivos y mejorar la producción agrícola.
 
