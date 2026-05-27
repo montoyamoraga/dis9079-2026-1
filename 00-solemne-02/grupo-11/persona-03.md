@@ -123,6 +123,7 @@ Además, algunos sistemas usan sensores climáticos que predicen cambios de temp
 
 Este proyecto es muy importante porque demuestra cómo los sensores pueden utilizarse de forma real y eficiente para resolver problemas ambientales y productivos. Actualmente empresas agrícolas y universidades utilizan estos sistemas en distintos países para optimizar recursos y aumentar la producción de alimentos.
 
+<img width="757" height="322" alt="WhatsApp Image 2026-05-27 at 06 10 28" src="https://github.com/user-attachments/assets/179295d3-899f-4723-b4fc-52da1ccf04f7" />
 
 Plantae. (s.f.). Sensores inalámbricos de humedad para agricultura. Recuperado de https://plantae.garden/sensores-inalambricos-plantae-ahorro-agua-inteligente/
 # Actuador
@@ -214,16 +215,18 @@ Los actuadores permiten mover el cabezal en diferentes direcciones (ejes X, Y y 
 
 Actualmente las impresoras 3D se utilizan en diseño industrial, medicina, arquitectura, ingeniería y educación. En medicina, por ejemplo, se utilizan para fabricar prótesis personalizadas y modelos anatómicos. En arquitectura se crean maquetas detalladas y en ingeniería se producen prototipos funcionales rápidamente.
 
-Este proyecto demuestra cómo los actuadores permiten transformar información digital en movimientos físicos reales y precisos, convirtiéndose en una herramienta fundamental en la automatización moderna.   
+Este proyecto demuestra cómo los actuadores permiten transformar información digital en movimientos físicos reales y precisos, convirtiéndose en una herramienta fundamental en la automatización moderna. 
+
+<img width="655" height="621" alt="WhatsApp Image 2026-05-27 at 06 10 28 (1)" src="https://github.com/user-attachments/assets/7a07b05d-50dc-47da-bdf8-4313052a0ec7" />
 
 Ultimaker. (s.f.). Motores y actuadores en impresoras 3D. https://ultimaker.com/learn/what-is-3d-printing/
 
 # Bibliografía
 
-arduino.cc⁠
-learn.microsoft.com⁠
-docs.arduino.cc⁠
-bostondynamics.com⁠
-agriculturaia.com⁠
-plantae.garden⁠
-tripo3d.ai⁠
+* arduino.cc⁠
+* learn.microsoft.com⁠
+* docs.arduino.cc⁠
+* bostondynamics.com⁠
+* agriculturaia.com⁠
+* plantae.garden⁠
+* tripo3d.ai⁠
