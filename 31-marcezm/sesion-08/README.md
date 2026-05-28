@@ -55,7 +55,7 @@ Una vez instalado el sistema:
 
 ```python
 Ctrl + D
-
+```
 ## Descarga de bibliotecas
 
 Para continuar con el desarrollo del proyecto trabajamos con distintas bibliotecas necesarias para el correcto funcionamiento del código en CircuitPython.
