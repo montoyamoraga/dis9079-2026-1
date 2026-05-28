@@ -45,7 +45,7 @@ Se utilizó como actuador una pantalla OLED junto con un push button. El funcion
 
 La pantalla OLED funciona mediante comunicación digital (generalmente protocolo I2C), lo que permite transmitir datos desde el microcontrolador hacia la pantalla usando pocos pines. Este tipo de pantalla se caracteriza por su bajo consumo energético, buen contraste y capacidad de mostrar texto o gráficos de forma clara. Por otro lado, el push button es un interruptor momentáneo que cierra el circuito solo mientras se presiona, enviando una señal digital al sistema.
 
-### Aprendizajes y errores
+## Aprendizajes y errores
 
 Con el sensor PIR tuvimos varios problemas. Trabajamos con dos modelos distintos: uno que venía con cables integrados y otro sin ellos. Por lo que investigamos, el que tenía cables estaba modificado. El sensor con cables integrados nunca logró funcionar correctamente, incluso después de probar distintos códigos y configuraciones.
 
@@ -61,7 +61,17 @@ El siguiente desafío fue agregar los demás frames, ya que teníamos que conver
 
 Finalmente, conseguimos que el GIF funcionara correctamente y se reprodujera completo en la pantalla.
 
-### Resultado final
+### Pruebas de animación
+
+![pruebas](imagenes/pruebas1.gif)
+
+![pruebas](imagenes/pruebas.gif)
+
+![pruebas](imagenes/pruebas3.jpeg)
+
+![pruebas](imagenes/pruebas2.jpeg)
+
+## Resultado final
 A pesar de los errores y contratiempos que tuvimos durante el desarrollo, finalmente logramos obtener una animación funcional para el proyecto.
 Después de varias pruebas, decidimos simplificar la idea inicial y trabajar solo con un personaje, agregándole más frames para mejorar la fluidez del movimiento y lograr un resultado más estable en la pantalla.
 El resultado final fue una animación de un alien, esta se proyecta en la pantalla OLED que es accionada por un botón y que está conectada a su vez al Arduino UNO R4 Wifi que recibe la señal de Adafruit IO. Esa señal se manda gracias a un sensor PIR accionado por un botón, que al detectar el movimiento, la Raspberry Pi Pico 2 W manda la señal a la nube de Adafruit IO.
@@ -73,16 +83,6 @@ Resultado de la animación al momento de que el sensor PIR siente movimiento.
 ![resultado](imagenes/solemne3.jpeg)
 
 Resultado de la animación.
-
-### Pruebas de animación
-
-![pruebas](imagenes/pruebas1.gif)
-
-![pruebas](imagenes/pruebas.gif)
-
-![pruebas](imagenes/pruebas3.jpeg)
-
-![pruebas](imagenes/pruebas2.jpeg)
 
 ## Código usado para enviar
 
