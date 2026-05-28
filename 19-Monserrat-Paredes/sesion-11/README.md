@@ -2,15 +2,18 @@ lunes 25 mayo 2026
 
 Corregir y probar las solemnes en clases frente a todos
 
-<img width="960" height="1280" alt="LUMI" src="https://github.com/user-attachments/assets/eff5c61b-0811-4d51-bfd8-914a38e551e4" />
+
+<img width="960" height="1280" alt="lumi" src="https://github.com/user-attachments/assets/769f2507-f919-4aaa-b9c7-745ce95ac26b" />
+
 
 
 ## Comentarios
 
 Imagenes no tienen créditos específicos, siempre incluirlos, aunque sean de factura propia.
 
-
 ## Correcciones
+
+Carpetas y nombres de imagenes arregladas :,)
 
 Ya están actualizados en la sesión-10 y en la solemne-02 persona-01 :)
 
