@@ -19,8 +19,10 @@ El chip aplica una pequeña corriente a un material conductor conectado a él,qu
 ## Artista
 
 Colectivo francés Scenocosme: compuesto por Grégory Lasserre y Anaïs met den Ancxt.
-Es un dúo de artistas contemporáneos franceses, que  trabaja en conjunto desde 2003. 
-Su propuesta artística se centra en la combinación entre la naturaleza y la tecnología digital. Son reconocidos internacionalmente por crear obras interactivas y entornos de inmersión donde elementos vivos y orgánicos, como plantas, agua, madera y piedras reaccionan a estímulos sutiles del cuerpo humano, el calor corporal, el aliento o la energía electrostática,para generar paisajes sonoros y visuales poéticos.
+
+Es un dúo de artistas contemporáneos franceses, que  trabaja en conjunto desde 2003. Su propuesta artística se centra en la combinación entre la naturaleza y la tecnología digital.
+
+Son reconocidos internacionalmente por crear obras interactivas y entornos de inmersión donde elementos vivos y orgánicos, como plantas, agua, madera y piedras reaccionan a estímulos sutiles del cuerpo humano, el calor corporal, el aliento o la energía electrostática,para generar paisajes sonoros y visuales poéticos.
 
 * Anaïs met den Ancxt nació en Lyon, en el año 1981.Estudió Antropología en la Universidad de Lyon y posteriormente se graduó de la École Nationale des Beaux-Arts de Lyon con una especialización en diseño de espacios. Aporta a la obra una fuerte visión estética, conceptual y de circulación espacial.
 
@@ -35,16 +37,17 @@ Cuando el público se acerca a las hojas o las acaricia, el sensor MPR121 regist
 
 ### Para lograr que las plantas funcionen como una interfaz digital, se realiza la siguiente instalación de hardware:
 
-El microcontrolador y el circuito capacitivo, utilizan un circuito electrónico, que puede ser un microcontrolador o placas de desarrollo específicas para detección táctil capacitiva, similares a la tecnología que hace funcionar las pantallas de los celulares,es capaz de medir variaciones diminutas en la capacitancia eléctrica.
-Luego se  conecta  un cable eléctrico muy delgado desde las entradas analógicas/capacitivas del circuito directo a la tierra húmeda, muy cerca de las raíces de la planta.Dado que las plantas vivas están llenas de agua, savia y sales minerales, son excelentes conductoras de electricidad. Al conectar el cable a las raíces, toda la estructura de la planta (raíces, tallo, ramas y hojas) se electrifica sutilmente, convirtiéndose en una extensión del propio circuito, es decir, en una gran "antena" o electrodo biológico.
+El microcontrolador y el circuito capacitivo, utilizan un circuito electrónico, que puede ser un microcontrolador o placas de desarrollo específicas para detección táctil capacitiva, similares a la tecnología que hace funcionar las pantallas de los celulares,es capaz de medir variaciones diminutas en la capacitancia eléctrica. Luego se  conecta  un cable eléctrico muy delgado desde las entradas analógicas/capacitivas del circuito directo a la tierra húmeda, muy cerca de las raíces de la planta. Dado que las plantas vivas están llenas de agua, savia y sales minerales, son excelentes conductoras de electricidad. Al conectar el cable a las raíces, toda la estructura de la planta (raíces, tallo, ramas y hojas) se electrifica sutilmente, convirtiéndose en una extensión del propio circuito, es decir, en una gran "antena" o electrodo biológico.
 
 ### ¿Cómo funciona la interacción física con los espectadores?
 
-El cuerpo humano produce y almacena energía electrostática de manera constante. Aunque es imperceptible para nosotros, nos rodea una especie de campo eléctrico débil. Cuando un espectador se acerca, pasa la mano cerca o acaricia las hojas de la planta, el campo eléctrico del cuerpo interactúa con el de la planta. Esto altera la capacitancia del sistema (la capacidad de almacenar carga eléctrica en ese espacio intermedio).
-El circuito detecta instantáneamente este micro-cambio en la carga eléctrica. 
+El cuerpo humano produce y almacena energía electrostática de manera constante. Aunque es imperceptible para nosotros, nos rodea una especie de campo eléctrico débil. Cuando un espectador se acerca, pasa la mano cerca o acaricia las hojas de la planta, el campo eléctrico del cuerpo interactúa con el de la planta. Esto altera la capacitancia del sistema (la capacidad de almacenar carga eléctrica en ese espacio intermedio). El circuito detecta instantáneamente este micro-cambio en la carga eléctrica. 
+
 Lo interesante de la tecnología capacitiva es que no requiere un choque eléctrico ni un interruptor mecánico, y es tan sensible que puede registrar variaciones antes de que se produzca un contacto físico real por proximidad, aumentando el valor de la lectura a medida que el toque se vuelve más firme.
+
 Una vez que el circuito registra los datos del cambio eléctrico, el proceso sigue estos pasos:
- El microcontrolador transforma la variación de capacitancia analógica en datos digitales (valores numéricos de intensidad, velocidad y cercanía).Estos datos se envían en tiempo real a una computadora que ejecuta un software de diseño sonoro.
+
+El microcontrolador transforma la variación de capacitancia analógica en datos digitales (valores numéricos de intensidad, velocidad y cercanía).Estos datos se envían en tiempo real a una computadora que ejecuta un software de diseño sonoro.
 Cada planta tiene asignada una "voz" o comportamiento digital distinto según su morfología y la textura de sus hojas. Si se aproximan despacio, el sonido puede ser un murmullo, si se acaricia con fuerza, la textura del sonido cambia a un canto o una vibración acústica compleja, logrando que el público actúe como el director de una orquesta botánica y viva.
 
 ### Video de la instalación:
