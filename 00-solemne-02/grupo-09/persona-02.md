@@ -102,6 +102,9 @@ La obra consiste en una gran malla geométrica suspendida en el espacio que flot
 
 La instalación cobra vida gracias a 729 servomotores individuales distribuidos de manera equidistante a lo largo de todo el entramado de aluminio. El sistema informático de control recibe las coordenadas espaciales de la superficie del agua y las traduce instantáneamente en señales eléctricas de modulación por ancho de pulsos (PWM) independientes para cada motor. Al activarse de forma coordinada, los servomotores rotan sus ejes milimétricamente para subir o bajar los brazos articulados de la estructura. Al observar la obra, el espectador puede notar cómo el "ronroneo" o zumbido colectivo de los 729 servomotores elimina la rigidez de la rejilla cuadriculada, transformándola en una onda líquida y fluida que imita fielmente la coreografía autónoma del lago.
 
+### Video entrevista a David Bowen:
+https://youtu.be/o3OJAZzcIB4?si=BSyVsKiQvT4uupeT
+
 ## Bibliografía
 * https://www.nxp.com/products/MPR121?hl=es-CL
 * https://learn.adafruit.com/adafruit-mpr121-12-key-capacitive-touch-sensor-breakout-tutorial?hl=es-CL
@@ -109,6 +112,7 @@ La instalación cobra vida gracias a 729 servomotores individuales distribuidos 
 * https://docs.arduino.cc/libraries/servo/#Usage/Examples
 * https://www.smoothware.com/danny/?hl=es-CL
 * https://www.bitforms.art/artwork/wooden-mirror-2
+* https://mmam.org/david-bowen?hl=es-CL
 
 
 
