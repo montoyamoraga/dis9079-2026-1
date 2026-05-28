@@ -47,4 +47,16 @@ Un motor de corriente continua común, un conjunto de engranajes reductores, par
 El microcontrolador envía una señal eléctrica digital tipo PWM (Pulse Width Modulation). Dependiendo del ancho o duración de los pulsos eléctricos que recibe, el circuito interno del servomotor calcula el ángulo exacto al que debe girar, por ejemplo: entre 0° y 180°. El motor gira y el potenciómetro interno avisa al circuito cuando ha llegado a la posición deseada para detenerse ahí.
 
 
+## Artista 
+
+Daniel Rozin.
+
+## Obra: Wooden Mirror
+
+En esta  instalación de arte cinético,el artista utiliza 830 servomotores como actuadores principales.
+
+La obra está compuesta por una matriz de 830 pequeñas piezas cuadradas de madera, y cada una de ellas está acoplada directamente al eje de un servomotor independiente.Una cámara central oculta el sensor, captura la silueta y los movimientos de la persona que se para frente a la obra. Después una computadora procesa esa imagen en tiempo real, calcula los niveles de luz y sombra de cada zona, y envía comandos eléctricos individuales a los 830 servomotores.
+Al recibir la señal, los motores actúan de inmediato rotando cada pieza de madera hacia arriba o hacia abajo y como la luz del techo incide de manera distinta según la inclinación de la madera, está va generando zonas claras y oscuras, entonces los actuadores logran como “dibujar” mecánicamente el reflejo y la sombra del espectador en tiempo real.
+
+
 ## Bibliografía
